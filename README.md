@@ -23,7 +23,7 @@ MySQL.
 
 <h1>Propose</h1>
 
-Based on the current situation, many people around the world, in addition to going to work to learn and improve their knowledge, search on Google to find documents. They have too much knowledge to absorb but don't know how to summarize the knowledge enough, learn things to apply to real world... There are many problems happening, so this is the reason why they I built this website.
+Based on the current situation, many people around the world, in addition to going to work to learn and improve their knowledge, search on Google to find documents. They have too much knowledge to absorb but don't know how to summarize the knowledge enough, learn things to apply to real world... There are many problems happening, so this is the reason why this website will help many people in the world.
 
 <h1>Content</h1>
 
