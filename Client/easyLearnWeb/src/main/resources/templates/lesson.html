@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<th:block th:replace = "~{fragments :: html_head}">
+</th:block>
+<link rel="stylesheet" type = "text/css" th:href="@{/css/lesson.css}"/>
+
+    <meta name="robots" content="noindex">
+
+    <!-- Preloader -->
+    <link type="text/css" th:href="@{/vendor/spinkit.css}" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" th:href="@{/vendor/perfect-scrollbar.css}" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" th:href="@{/css/material-icons.css}" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" th:href="@{/css/fontawesome.css}" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" th:href="@{/css/preloader.css}" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" th:href="@{/css/app.css}" rel="stylesheet">
+
+</head>
+
+<body>
+<!-- Header -->
+<div class="mdk-header-layout js-mdk-header-layout">
+    <div id="header"
+         class="mdk-header js-mdk-header mb-0"
+         data-fixed
+         data-effects="">
+        <div class="mdk-header__content">
+
+            <!-- Navbar -->
+
+            <div class="navbar navbar-expand pr-0 navbar-dark-pickled-bluewood navbar-shadow"
+                 id="default-navbar"
+                 data-primary>
+
+                <!-- Navbar Toggler -->
+
+                <button class="navbar-toggler w-auto mr-16pt d-block rounded-0"
+                        type="button"
+                        data-toggle="sidebar">
+                    <span class="material-icons"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                </button>
+
+                <!-- // END Navbar Toggler -->
+
+                <!-- Navbar Brand -->
+
+                <a href="index.html"
+                   class="navbar-brand mr-16pt">
+
+                            <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+                                <span class="avatar-title rounded bg-primary"><img src="https://luma.humatheme.com/public/images/illustration/student/128/white.svg"
+                                                                                   alt="logo"
+                                                                                   class="img-fluid" /></span>
+
+                            </span>
+
+                    <span class="d-none d-lg-block">EasyLearn</span>
+                </a>
+
+                <!-- // END Navbar Brand -->
+
+                <span class="d-none d-md-flex align-items-center mr-16pt">
+
+                            <span class="avatar avatar-sm mr-12pt">
+
+                                <span class="avatar-title rounded navbar-avatar"><i class="material-icons"><i class="fa-solid fa-trophy"></i></i></span>
+
+                            </span>
+
+                            <small class="flex d-flex flex-column">
+                                <strong class="navbar-text-100">Experience IQ</strong>
+                                <span class="navbar-text-50">2,300 points</span>
+                            </small>
+                        </span>
+
+                <!-- Navbar Search -->
+
+                <form class="search-form navbar-search d-none d-md-flex mr-16pt"
+                      action="https://luma.humatheme.com/Demos/Fixed_Layout/index.html">
+                    <button class="btn"
+                            type="submit"><i class="material-icons"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Search ...">
+                </form>
+
+                <!-- // END Navbar Search -->
+
+                <div class="flex"></div>
+
+                <!-- Navbar Menu -->
+
+                <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
+
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item dropdown dropdown-notifications dropdown-xs-down-full"
+                         data-toggle="tooltip"
+                         data-title="Messages"
+                         data-placement="bottom"
+                         data-boundary="window">
+                        <button class="nav-link btn-flush dropdown-toggle"
+                                type="button"
+                                data-toggle="dropdown"
+                                data-caret="false">
+                            <i class="material-icons icon-24pt"><i class="fa-solid fa-comment"></i></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar
+                                 class="position-relative">
+                                <div class="dropdown-header"><strong>Messages</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action unread">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">5 minutes ago</small>
+
+                                                    <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                                </span>
+                                        <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <img th:src="@{/img/people/110/woman-5.jpg}"
+                                                             alt="people"
+                                                             class="avatar-img rounded-circle">
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="text-black-100">Michelle</strong>
+                                                        <span class="text-black-70">Clients loved the new design.</span>
+                                                    </span>
+                                                </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">5 minutes ago</small>
+
+                                                </span>
+                                        <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <img th:src="@{/img/people/110/woman-5.jpg}"
+                                                             alt="people"
+                                                             class="avatar-img rounded-circle">
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="text-black-100">Michelle</strong>
+                                                        <span class="text-black-70">🔥 Superb job..</span>
+                                                    </span>
+                                                </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications dropdown-xs-down-full"
+                         data-toggle="tooltip"
+                         data-title="Notifications"
+                         data-placement="bottom"
+                         data-boundary="window">
+                        <button class="nav-link btn-flush dropdown-toggle"
+                                type="button"
+                                data-toggle="dropdown"
+                                data-caret="false">
+                            <i class="material-icons"><i class="fa-solid fa-bell"></i></i>
+                            <span class="badge badge-notifications badge-accent">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar
+                                 class="position-relative">
+                                <div class="dropdown-header"><strong>System notifications</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action unread">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">3 minutes ago</small>
+
+                                                    <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                                </span>
+                                        <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <span class="avatar-title rounded-circle bg-light">
+                                                            <i class="material-icons font-size-16pt text-accent"><i class="fa-solid fa-circle-user"></i></i>
+                                                        </span>
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+
+                                                        <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                                    </span>
+                                                </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">5 hours ago</small>
+
+                                                </span>
+                                        <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <span class="avatar-title rounded-circle bg-light">
+                                                            <i class="material-icons font-size-16pt text-primary"><i class="fa-solid fa-user-plus"></i></i>
+                                                        </span>
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="text-black-100">Adrian. D</strong>
+                                                        <span class="text-black-70">Wants to join your private group.</span>
+                                                    </span>
+                                                </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">1 day ago</small>
+
+                                                </span>
+                                        <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <span class="avatar-title rounded-circle bg-light">
+                                                            <i class="material-icons font-size-16pt text-warning"><i class="fa-solid fa-database"></i></i>
+                                                        </span>
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+
+                                                        <span class="text-black-70">Your deploy was successful.</span>
+                                                    </span>
+                                                </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+
+                    <div class="nav-item dropdown">
+                        <a href="#"
+                           class="nav-link d-flex align-items-center dropdown-toggle"
+                           data-toggle="dropdown"
+                           data-caret="false">
+
+                                    <span class="avatar avatar-sm mr-8pt2">
+
+                                        <span class="avatar-title rounded-circle bg-primary"><i class="material-icons"><i class="fa-solid fa-user"></i></i></span>
+
+                                    </span>
+
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item"
+                               href="edit-account.html">Edit Account</a>
+                            <a class="dropdown-item"
+                               href="billing.html">Billing</a>
+                            <a class="dropdown-item"
+                               href="billing-history.html">Payments</a>
+                            <a class="dropdown-item"
+                               href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- // END Navbar Menu -->
+
+            </div>
+
+            <!-- // END Navbar -->
+
+        </div>
+    </div>
+    <div class="div">
+
+
+        <main class="container">
+
+            <section class="main-video">
+                <video th:src="@{https://storage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4}" controls autoplay></video>
+                <h3 th:text="${lessonList.getFirst().getTitle()}" class="title">Title of the playing video</h3>
+
+            </section>
+            <section class="video-playlist">
+
+                <h3  th:text="${detailsCourse.getTitle()}" class="title">Title of the video playlist</h3>
+
+                <p>10 lessons &nbsp; . &nbsp; 50m 48s</p>
+                <div class="videos">
+                    <!--  video inject by js-->
+                </div>
+
+            </section>
+
+            <input type="hidden" id="pauseSVG" th:src="@{/img/logo/pause-button-svgrepo-com.svg}">
+            <input type="hidden" id="playSVG" th:src="@{/img/logo/play}">
+
+        </main>
+
+
+
+        <!--    Footer-->
+    </div>
+</div>
+<script th:inline="javascript">
+    let data = [[${lessonList}]];
+</script>
+<script type="text/javascript">
+    const main_video = document.querySelector('.main-video video');
+    const main_video_title = document.querySelector('.main-video .title');
+    const video_playlist = document.querySelector('.video-playlist .videos');
+
+    // let data = [
+    //     {
+    //         'id': 'a1',
+    //         'title': 'manipulate text background',
+    //         'name': 'manipulate text background.mp4',
+    //         'duration': '2:47',
+    //     },
+    //     {
+    //         'id': 'a2',
+    //         'title': 'build gauge with css',
+    //         'name': 'build gauge with css.mp4',
+    //         'duration': '2:45',
+    //     },
+    //     {
+    //         'id': 'a3',
+    //         'title': '3D popup card',
+    //         'name': '3D popup card.mp4',
+    //         'duration': '24:49',
+    //     },
+    //
+    //     {
+    //         'id': 'a4',
+    //         'title': 'customize HTML5 form elements',
+    //         'name': 'customize HTML5 form elements.mp4',
+    //         'duration': '3:59',
+    //     },
+    //     {
+    //         'id': 'a5',
+    //         'title': 'custom select box',
+    //         'name': 'custom select box.mp4',
+    //         'duration': '4:25',
+    //     },
+    //     {
+    //         'id': 'a6',
+    //         'title': 'embed google map to contact form',
+    //         'name': 'embed google map to contact form.mp4',
+    //         'duration': '5:33',
+    //     },
+    //     {
+    //         'id': 'a7',
+    //         'title': 'password strength checker javascript web app',
+    //         'name': 'password strength checker javascript web app.mp4',
+    //         'duration': '0:29',
+    //     },
+    //
+    //     {
+    //         'id': 'a8',
+    //         'title': 'custom range slider',
+    //         'name': 'custom range slider.mp4',
+    //         'duration': '1:12',
+    //     },
+    //     {
+    //         'id': 'a9',
+    //         'title': 'animated shopping cart',
+    //         'name': 'animated shopping cart.mp4',
+    //         'duration': '3:38',
+    //     },
+    //
+    // ];
+
+
+    data.forEach((video, i) => {
+        let video_element = `
+                <div class="video" data-id="${video.id}">
+                    <!--path issue need to be fixed-->
+                    <img src="../static/img/logo/play" alt="">
+                    <p>${i + 1 > 9 ? i + 1 : '0' + (i + 1)}. </p>
+                    <h3 class="title">${video.title}</h3>
+                    <p class="time">${video.duration}</p>
+                </div>
+    `;
+        video_playlist.innerHTML += video_element;
+    })
+
+    let videos = document.querySelectorAll('.video');
+    videos.forEach(selected_video => {
+        selected_video.onclick = () => {
+            let pauseIcon = document.getElementById("pauseSVG").src;
+            let playIcon = document.getElementById("playSVG").src;
+            for (all_videos of videos) {
+                all_videos.classList.remove('active');
+                selected_video.querySelector('img').src = playIcon;
+
+            }
+            selected_video.classList.add('active');
+            selected_video.querySelector('img').src = pauseIcon;
+
+
+            let match_video = data.find(video => video.id == selected_video.dataset.id);
+            main_video.src = match_video.url;
+            main_video_title.innerHTML = match_video.title;
+        }
+
+    })
+</script>
+
+<!-- // END Header -->
+
+
+</body>
+</html>

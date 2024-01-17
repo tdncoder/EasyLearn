@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>View Trainer Salary</title>
+</head>
+<body>
+
+<div class="container">
+
+    <h2 class="mt-4">View Trainer Salary</h2>
+
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>Trainer Salary Paid ID</th>
+            <th>Week Number</th>
+            <th>Month Number</th>
+            <th>Year Number</th>
+            <th>Total Number</th>
+        </tr>
+        <tr>
+            <td th:text="${trainerSalaryPaidDTO.id}"></td>
+            <td th:text="${trainerSalaryPaidDTO.trainerSalaryPaidId}"></td>
+            <td th:text="${trainerSalaryPaidDTO.weekNumber}"></td>
+            <td th:text="${trainerSalaryPaidDTO.monthNumber}"></td>
+            <td th:text="${trainerSalaryPaidDTO.yearNumber}"></td>
+            <td th:text="${trainerSalaryPaidDTO.totalNumber}"></td>
+        </tr>
+    </table>
+
+    <a class="btn btn-primary" th:href="@{'/trainersalarysummary/list'}">Back to List</a>
+
+</div>
+
+<!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<div th:fragment="titlePageContent">
+    <div class="row d-flex justify-content-between">
+        <div class="col-xl-3 col-lg-3">
+            <div class="row d-flex flex-column mx-0">
+            <div class="card border-left-primary shadow py-1">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Total members
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                3
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-left-success shadow py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Total income
+                            </div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                600$
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-xl-9 col-lg-12 ">
+
+        <div class="card">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img th:src="@{'/getImg/'+${courseEdit.img}}" class="custom-img rounded-start" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="table card-body py-3 my-0">
+                        <input type="hidden" th:field="*{courseEdit.id}"/>
+                        <h3 th:text="${courseEdit.title}" class="card-title"></h3>
+                        <p th:text="${courseEdit.description}" class="card-text"></p>
+                        <p class="card-text"><small th:text="${courseEdit.lastUpdate}" class="text-body-secondary"></small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

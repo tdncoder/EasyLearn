@@ -1,0 +1,12 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<div th:fragment="titlePageContentTable">
+    <h2>Trainer Salary Paid Management</h2>
+
+    <button type="button" class="btn btn-primary mb-2" data-toggle="modal" onclick="prepareCreateNew()">Create New</button>
+    <a type="button" class="btn btn-primary mb-2" th:href="@{/trainer-salary/downloadReport(format='pdf')}">PDF Report</a>
+    <a type="button" class="btn btn-primary mb-2" th:href="@{/trainer-salary/downloadReport(format='excel')}">Excel Report</a>
+    <a type="button" class="btn btn-primary mb-2" th:href="@{/trainer-salary/downloadReport(format='csv')}">CSV Report</a>
+</div>

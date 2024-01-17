@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div class="card shadow mb-4" th:fragment="table">
+    <div class="card-header py-3">
+        <div class="container">
+
+
+            <form th:action="@{'/student/save'}" th:object="${studentDTO}" method="post">
+                <input type="hidden" th:field="*{id}"/>
+                <label class="form-label">Student ID: <input class="form-control" type="text" th:field="*{id}"/></label><br>
+                <label class="form-label">First Name: <input class="form-control" type="text" th:field="*{firstName} "/></label><br>
+                <label class="form-label">Last Name: <input class="form-control" type="text" th:field="*{lastName} "/></label><br>
+                <label class="form-label">Email: <input class="form-control" type="text" th:field="*{email}"/></label><br>
+                <label class="form-label">Phone: <input class="form-control" type="text" th:field="*{phone}"/></label><br>
+                <label class="form-label">Registered Course: <input class="form-control" type="text" th:field="*{classId}"/></label><br>
+                <button class="btn btn-primary" type="submit">Save</button>
+            </form>
+        </div>
+    </div>
+
+</div>

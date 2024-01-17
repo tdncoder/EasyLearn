@@ -1,0 +1,92 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div class="card shadow mb-4" th:fragment="table">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+            Trainer table
+        </h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table
+                    class="table table-bordered"
+                    id="dataTable"
+                    width="100%"
+                    cellspacing="0"
+            >
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>User</th>
+                    <th>Problem</th>
+                    <th>Date - time</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Detail</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th>Id</th>
+                    <th>User</th>
+                    <th>Problem</th>
+                    <th>Date - time</th>
+                    <th>Title</th>
+                    <th>Status</th>
+                    <th>Detail</th>
+                </tr>
+                </tfoot>
+                <tbody>
+                <tr>
+                    <td>001</td>
+                    <td><a href="#">chipheo123</a></td>
+                    <td>Course</td>
+                    <td>data time</td>
+                    <td>Tôi muốn Update Course cou01</td>
+                    <td class="text-center">
+                        <button class="btn-info btn">Pending</button>
+                    </td>
+                    <td><a th:href="@{/member/trainer/course/detail}">Lick</a></td>
+                </tr>
+
+                <tr>
+                    <td>002</td>
+                    <td><a href="#">chipheo125</a></td>
+                    <td>Test</td>
+                    <td>data time</td>
+                    <td>Update Test tes01</td>
+                    <td class="text-center">
+                        <button class="btn-success btn">Confirm</button>
+                    </td>
+                    <td><a th:href="@{/member/trainer/course/detail}">Lick</a></td>
+                </tr>
+
+                <tr>
+                    <td>003</td>
+                    <td><a href="#">chipheo124</a></td>
+                    <td>Test</td>
+                    <td>data time</td>
+                    <td>Create Test tes03</td>
+                    <td class="text-center">
+                        <button class="btn-danger btn">Cancelled</button>
+                    </td>
+                    <td><a th:href="@{/member/trainer/course/detail}">Lick</a></td>
+                </tr>
+
+                <tr>
+                    <td>004</td>
+                    <td><a href="#">chipheo126</a></td>
+                    <td>Course</td>
+                    <td>data time</td>
+                    <td>Create Course cou03</td>
+                    <td class="text-center">
+                        <button class="btn-info btn">Pending</button>
+                    </td>
+                    <td><a th:href="@{/member/trainer/course/detail}">Lick</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

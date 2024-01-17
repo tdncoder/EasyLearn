@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div class="card shadow mb-4" th:fragment="table">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+            Student table
+        </h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table
+                    class="table table-bordered"
+                    id="dataTable"
+                    width="100%"
+                    cellspacing="0"
+            >
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>User</th>
+                    <th>Status</th>
+                    <th>Date - time</th>
+                    <th>Title</th>
+                    <th>Detail</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th>Id</th>
+                    <th>User</th>
+                    <th>Status</th>
+                    <th>Date - time</th>
+                    <th>Title</th>
+                    <th>Detail</th>
+                </tr>
+                </tfoot>
+                <tbody>
+                <tr>
+                    <td>001</td>
+                    <td><a href="#">chipheo123</a></td>
+                    <td>DB client request (Pay - Course - Test)</td>
+                    <td>data time</td>
+                    <td>Hãy giúp tôi khắc phục tình trạng không nạp được tiền vào hệ thống</td>
+                    <td><a th:href="@{/customerCare/student/detail}">Lick</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

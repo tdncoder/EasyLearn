@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="pages/finance_management/head :: head"></div>
+
+<body id="page-top">
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div th:replace="pages/fragment/sidebar_after_login :: sidebar"></div>
+
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div class="container">
+
+        <h2 class="mt-4">Edit Trainer Salary</h2>
+
+        <form th:action="@{'/trainersalarysummary/save'}" th:object="${trainerSalaryPaidDTO}" method="post">
+            <input type="hidden" th:field="*{id}"/>
+            <label class="form-label">Trainer Salary Paid ID: <input class="form-control" type="text" th:field="*{trainerSalaryPaidId}"/></label><br>
+            <label class="form-label">Month Number: <input class="form-control" type="text" th:field="*{monthNumber}"/></label><br>
+            <label class="form-label">Year Number: <input class="form-control" type="text" th:field="*{yearNumber}"/></label><br>
+            <label class="form-label">Total Number: <input class="form-control" type="text" th:field="*{totalNumber}"/></label><br>
+            <button class="btn btn-success" type="submit">Save Changes</button>
+        </form>
+
+        <a class="btn btn-primary" th:href="@{'/trainersalarysummary/list'}">Back to List</a>
+
+    </div>
+
+    <!-- END Table -->
+
+    <!--end of table notification admin -->
+
+</div>
+<!--end of table notification admin -->
+
+<!-- Footer -->
+<div th:replace="pages/fragment/footer_after_login :: footer"></div>
+<!-- End of Footer -->
+
+</div>
+<!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div th:replace="pages/fragment/modal_logout_after_login :: modal_logout"></div>
+
+<!-- Bootstrap core JavaScript-->
+<div th:replace="pages/fragment/script :: script"></div>
+</body>
+</html>

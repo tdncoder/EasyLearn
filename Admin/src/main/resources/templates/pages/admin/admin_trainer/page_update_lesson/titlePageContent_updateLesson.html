@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+
+<div th:fragment="titlePageContent" class="card table px-5 py-5">
+    <form th:action="@{'/adminTrainer/'+${courseIdToLesson.id}+'/updateLesson/'+${lessonUpdate.id} }" onsubmit="return checkNullLessonCreate()"
+          th:object="${lessonUpdate}"
+          enctype="multipart/form-data" method="post">
+        <div class="text-center w-100">
+            <h2>Update lesson form</h2>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center">
+            <div class="w-50  shadow-lg p-4 mb-1 bg-body-tertiary rounded">
+                <input type="hidden" th:field="*{id}">
+                <div class="mb-3">
+                    <label for="number" class="form-label">Number Lesson</label>
+                    <input th:field="*{number}" type="text" class="form-control input-element" id="number" placeholder="1,2,3,..."></input>
+                    <p id="numberError" class="e-wrong d-none"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="Title" class="form-label">Title Lesson</label>
+                    <input th:field="*{title}" type="text" class="form-control input-element" id="Title" placeholder="Title">
+                    <p id="titleError" class="e-wrong d-none"></p>
+                </div>
+                <fieldset disabled="" class="my-3">
+                    <label for="disabledTextInput" class="form-label">Last update</label>
+                    <input th:field="*{lastUpdate}" type="text" id="disabledTextInput" class="form-control" placeholder="Time last update">
+                </fieldset>
+
+                <hr>
+                    <div class="mb-3">
+                        <h3 class="fs-5">Choose Video</h3>
+                        <input name="videoLessonEdit" type="file" class="input-element">
+                        <p id="videoError" class="e-wrong d-none"></p>
+                    </div>
+                <hr>
+            </div>
+            <hr>
+            <div>
+                <a th:href="@{'/adminTrainer/edit/'+${lessonUpdate.getCourseEditId()}}" class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                <button type="submit" class="btn btn-primary"
+                        th:onclick="return confirm('Are you sure you want to update this Lesson?')">Update</button>
+            </div>
+        </div>
+    </form>
+</div>

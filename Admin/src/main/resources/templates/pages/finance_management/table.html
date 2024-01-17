@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div class="card shadow mb-4" th:fragment="table">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+            Table admin
+        </h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>Trainer Salary Paid ID</th>
+                    <th>Month Number</th>
+                    <th>Year Number</th>
+                    <th>Total Number</th>
+                    <th>Actions</th>
+                </tr>
+                <tr th:each="trainerSalaryPaidDTO : ${trainerSalaryPaidList}">
+                    <td th:text="${trainerSalaryPaidDTO.id}"></td>
+                    <td th:text="${trainerSalaryPaidDTO.trainerSalaryPaidId}"></td>
+                    <td th:text="${trainerSalaryPaidDTO.monthNumber}"></td>
+                    <td th:text="${trainerSalaryPaidDTO.yearNumber}"></td>
+                    <td th:text="${trainerSalaryPaidDTO.totalNumber}"></td>
+                    <td>
+                        <a class="btn btn-info" th:href="@{'/trainersalarysummary/view/' + ${trainerSalaryPaidDTO.id}}">View</a>
+                        <a class="btn btn-info" th:href="@{'/trainersalarysummary/edit/' + ${trainerSalaryPaidDTO.id}}">Chỉnh Sửa</a>
+                        <a class="btn btn-danger" th:href="@{'/trainersalarysummary/delete/' + ${trainerSalaryPaidDTO.id}}">Delete</a>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+

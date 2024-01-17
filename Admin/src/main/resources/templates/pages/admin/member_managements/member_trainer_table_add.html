@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<div class="card shadow mb-4" th:fragment="table">
+    <div class="card-header py-3 row align-items-center d-flex flex-column justify-content-center">
+        <div class="container col-xl-4 p-3 card rounded">
+
+
+            <form th:action="@{'/trainer/save'}" th:object="${trainerDTO}" method="post" onsubmit="return checkNull2()">
+                <input type="hidden" th:field="*{id}"/>
+                <label class="form-label">First Name: <input id="firstname" class="form-control" type="text" th:field="*{firstname} "/></label><br>
+                <label class="form-label">Last Name: <input class="form-control" id="lastname" type="text" th:field="*{lastname} "/></label><br>
+                <label class="form-label">Email: <input class="form-control" id="email" type="text" th:field="*{email}"/></label><br>
+                <label class="form-label">Phone: <input class="form-control" id="phone" type="text" th:field="*{phone}"/></label><br>
+                <label class="form-label">Date Created: <input class="form-control" id="datecreated" type="date" th:field="*{datecreated}"/></label><br>
+                <select class=" form-select p-1 mt-2 rounded" aria-label="Default select example" id="status" th:field="*{status}" >
+                    <option selected value="-1">Status</option>
+                    <option value="Online" >Online</option>
+                    <option value="Offline" >Offline</option>
+                </select>
+                <br>
+                <div class="footer-action">
+                    <button type="submit" value="save" class="auth-submit btn mt-3 btn-primary" >Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/common-2.js}"></script>

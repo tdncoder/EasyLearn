@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="html_head">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/e7ac122c8f.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--local js and css-->
+<!--    <link rel="stylesheet" th:href="@{/css/index.css}">-->
+
+
+    <title>Page</title>
+</head>
+<body>
+<div th:fragment = "nav-bar" class="div-2">
+    <div class="div-3">
+        <img
+                loading="lazy"
+                th:src="@{/img/logo 3.svg}"
+                class="img"
+        />
+        <img
+                loading="lazy"
+                th:src="@{/img/slogan 1.svg}"
+                class="img-2"
+        />
+    </div>
+    <div class="div-4">
+        <div class="div-5">Home</div>
+        <div class="div-6">Course</div>
+        <div class="div-7">Article</div>
+        <div class="div-8">Support</div>
+    </div>
+<!--    <div class="div-9">-->
+<!--        <div class="div-10">-->
+<!--            <button class="button" data-el="button-1">Login</button>-->
+<!--        </div>-->
+<!--        <div class="div-11">-->
+<!--            <button class="button" data-el="button-2">Sign Up</button>-->
+<!--        </div>-->
+<!--    </div>-->
+</div>
+<div th:fragment = "footer" class="div-38">
+    <div class="div-39">
+        <img
+                loading="lazy"
+                srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                class="img-8"
+        />
+        <div class="div-40">
+            <div class="div-41">
+                <div class="div-42">EasyLearn</div>
+                <div class="div-43">
+                    Home
+                    <br />
+                </div>
+                <div class="div-44">Course</div>
+                <div class="div-45">
+                    Support
+                    <br />
+                </div>
+            </div>
+            <div class="div-46">
+                <div class="div-47">Company</div>
+                <div class="div-48">
+                    Article
+                    <br />
+                </div>
+                <div class="div-49">
+                    Terms
+                    <br />
+                </div>
+                <div class="div-50">Contact us</div>
+            </div>
+        </div>
+    </div>
+    <div class="div-51"></div>
+    <div class="div-52">
+        <div class="div-53">© Photo, Inc. 2023. We love our users!</div>
+        <div class="div-54">
+            <div class="div-55">Follow us:</div>
+            <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/430b5024efe2530ddb74ea55d9f637bc28848403548fc26c809710bc40334773?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                    class="img-9"
+            />
+            <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/28abbcb255438a18a763dffa347a4ce05dca3847b31248a9374999bf3ed2a91a?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                    class="img-10"
+            />
+            <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/b80fe7400927f9558e0b7c254e135f7090655f7afa226c4a55aa102167fd3272?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                    class="img-11"
+            />
+            <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/cbb4603ddfa19d35e1d02111d58ce5104db29d81edb3429a89113ab30b12766f?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                    class="img-12"
+            />
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

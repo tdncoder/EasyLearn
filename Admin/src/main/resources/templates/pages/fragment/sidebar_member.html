@@ -1,0 +1,151 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+        th:fragment="sidebar"
+>
+    <!-- Sidebar - Brand -->
+    <a
+            class="sidebar-brand d-flex align-items-center justify-content-center"
+            th:href="@{/admin}"
+    >
+        <div class="sidebar-brand-icon">
+            <img
+                    th:src="@{/img/z4880989428596_c95c89ed7fbbd3818bcb5aeaa5e7a096.jpg}"
+                    class="logo-img"
+                    alt="logo-img"
+            />
+        </div>
+        <div class="sidebar-brand-text mx-3">Admin Ministrator<sup></sup></div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0" />
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+        <a class="nav-link" th:href="@{/admin/dashboard}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Dashboard</span></a
+        >
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider" />
+
+    <li class="nav-item active">
+        <a class="nav-link" th:href="@{/adminTrainer/index}">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Admin Trainer</span></a
+        >
+    </li>
+    <hr class="sidebar-divider" />
+
+    <!-- Heading -->
+    <div class="sidebar-heading">Management</div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+<!--    <li class="nav-item">-->
+<!--        <a-->
+<!--                class="nav-link collapsed"-->
+<!--                href="#"-->
+<!--                data-toggle="collapse"-->
+<!--                data-target="#collapseTwo"-->
+<!--                aria-expanded="true"-->
+<!--                aria-controls="collapseTwo"-->
+<!--        >-->
+<!--            <i class="fas fa-fw fa-home"></i>-->
+<!--            <span>Finance management</span>-->
+<!--        </a>-->
+<!--        <div-->
+<!--                id="collapseTwo"-->
+<!--                class="collapse"-->
+<!--                aria-labelledby="headingTwo"-->
+<!--                data-parent="#accordionSidebar"-->
+<!--        >-->
+<!--            <div class="bg-white py-2 collapse-inner rounded">-->
+<!--                <h6 class="collapse-header">Member style:</h6>-->
+<!--                <a class="collapse-item" th:href="@{/admin/finance/student}">Student</a>-->
+<!--                <a class="collapse-item" th:href="@{/admin/finance/trainer}">Trainer</a>-->
+<!--&lt;!&ndash;                <a class="collapse-item" th:href="@{/admin/customer-care}">Customer care</a>&ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </li>-->
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+           aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Member management</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+             data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Member style</h6>
+                <a class="collapse-item" th:href="@{/admin/member/student}">Student</a>
+                <a class="collapse-item" th:href="@{/admin/member/trainer}">Trainer</a>
+            </div>
+        </div>
+    </li>
+
+<!--    <li class="nav-item">-->
+<!--        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"-->
+<!--           aria-expanded="true" aria-controls="collapsePages">-->
+<!--            <i class="fas fa-fw fa-folder"></i>-->
+<!--            <span>Customer care</span>-->
+<!--        </a>-->
+<!--        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">-->
+<!--            <div class="bg-white py-2 collapse-inner rounded">-->
+<!--                <h6 class="collapse-header">Customer style</h6>-->
+<!--                <a class="collapse-item" th:href="@{/admin/customerCare/student}">Student</a>-->
+<!--                <a class="collapse-item" th:href="@{/admin/customerCare/trainer}">Trainer</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </li>-->
+
+    <!-- Nav Item - Utilities Collapse Menu -->
+
+    <!-- Divider -->
+    <hr class="sidebar-divider" />
+
+    <!-- Heading -->
+    <div class="sidebar-heading">Addons</div>
+
+    <!-- Nav Item - Charts -->
+
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+        <a class="nav-link" th:href="@{/admin/table}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Tables</span></a
+        >
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block" />
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+    <!-- Sidebar Message -->
+    <div class="sidebar-card d-none d-lg-flex">
+        <img
+                class="sidebar-card-illustration mb-2"
+                th:src="@{/img/z4880989428596_c95c89ed7fbbd3818bcb5aeaa5e7a096.jpg}"
+                alt="..."
+        />
+        <p class="text-center mb-2">
+            <strong>Easy to learn</strong> is packed with premium features, components,
+            and more!
+        </p>
+        <a
+                class="btn btn-success btn-sm"
+                href="https://startbootstrap.com/theme/sb-admin-pro"
+        >Upgrade to Pro!</a
+        >
+    </div>
+</ul>

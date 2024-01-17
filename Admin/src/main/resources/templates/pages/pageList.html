@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>pageList.html</title>
+</head>
+<body>
+<form th:action="@{/upload}"
+      enctype="multipart/form-data"
+      method="post">
+<input type="file" name="testFile">
+    <button type="submit">Ok</button>
+</form>
+
+<ul th:each="list : ${testEditList}">
+    <li th:text="${list.question}"></li>
+    <li th:text="${list.op1}"></li>
+    <li th:text="${list.op2}"></li>
+    <li th:text="${list.op3}"></li>
+    <li th:text="${list.op4}"></li>
+</ul>
+</body>
+</html>

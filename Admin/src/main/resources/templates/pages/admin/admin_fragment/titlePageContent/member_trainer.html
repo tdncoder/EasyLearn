@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<div th:fragment="titlePageContentTable">
+    <div class="row d-flex justify-content-between">
+        <div class="col-xl-4 col-md-6 mt-2 ">
+            <h3>Trainer List</h3>
+        </div>
+        <div class="col-xl-8 col-md-12 mt-2">
+            <div class="row d-flex justify-content-end">
+                <div class="col-xl-2 col-lg-4 col-md-4">
+                    <div class="card shadow ">
+                <a th:href="@{/member/trainer/course}" class="btn btn-primary">Course</a>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-4 col-md-4">
+                    <div class="card shadow ">
+                        <a th:href="@{/member/trainer/activity}" class="btn btn-secondary">Activity</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

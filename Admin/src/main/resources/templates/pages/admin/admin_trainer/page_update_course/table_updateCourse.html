@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div class="card shadow mb-4 py-5" th:fragment="table">
+
+    <form th:action="@{/adminTrainer/save}" th:object="${courseUpdate}" onsubmit="return checkNull2()"
+          enctype="multipart/form-data" method="post">
+        <div class="text-center w-100">
+            <h2>Edit course form</h2>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center">
+            <div class="w-50  shadow-lg p-4 mb-1 bg-body-tertiary rounded">
+                <input type="hidden" th:field="*{id}">
+                <div class="my-3">
+                    <label for="Title" class="form-label">Title Course</label>
+                    <input th:field="*{title}" type="text" class="form-control input-element" id="Title" placeholder="Title">
+                    <p id="titleError" class="e-wrong d-none"></p>
+                </div>
+                <div class="mb-3">
+                    <label for="Description" class="form-label">Description</label>
+                    <textarea th:field="*{description}" class="form-control input-element" id="Description" placeholder="Description"></textarea>
+                    <p id="descriptionError" class="e-wrong d-none"></p>
+                </div>
+                <fieldset disabled class="mb-4">
+                    <label for="disabledTextInput" class="form-label">Last update</label>
+                    <input th:field="*{lastUpdate}" type="text" id="disabledTextInput" class="form-control" placeholder="Time last update">
+                </fieldset>
+
+                <div class="form-check">
+                    <input th:field="*{status}" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="1" >
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        ACTIVE
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input th:field="*{status}" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="0" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        INACTIVE
+                    </label>
+                </div>
+
+                <hr>
+                <div class="mb-3">
+                    <h3 class="fs-5">Choose Img Avatar</h3>
+                    <input name="imgCourseEdit" type="file" class="input-element">
+                    <p id="imgError" class="e-wrong d-none"></p>
+                </div>
+                <hr>
+            </div>
+            <hr>
+            <div>
+                <a th:href="@{/adminTrainer/index}" class="btn btn-secondary" data-dismiss="modal">Cancel</a>
+                <button type="submit" class="btn btn-primary"
+                        onclick="return confirm('Are you sure you want CHANGE this Course?')">Yes</button>
+
+            </div>
+        </div>
+    </form>
+</div>
+

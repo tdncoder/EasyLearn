@@ -1,0 +1,123 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="table">
+    <div class="card shadow mb-4" >
+        <div class="card-header py-3 justify-content-between d-flex align-items-center">
+            <h6 class="m-0 py-0 my-0 font-weight-bold text-primary">
+                Trainer table
+            </h6>
+<!--            <a class="btn btn-info" data-toggle="modal" th:data-target="'#addLessonModal' + ${courseEdit.id}">Add Lesson</a>-->
+                        <a th:href="@{'/adminTrainer/'+${courseEdit.id}+'/createLesson'}" class="btn btn-info" >Add Lesson</a>
+        </div>
+        <!--START Modal add lesson-->
+<!--        <div class="modal fade bd-example-modal-lg" th:id="'addLessonModal' + ${courseEdit.id}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">-->
+<!--            <div class="modal-dialog modal-lg" role="document">-->
+<!--                <div class="modal-content">-->
+<!--                    <input type="hidden" th:field="*{courseEdit.id}">-->
+<!--                    <div class="modal-header">-->
+<!--                        <div class="w-100 text-center">-->
+<!--                            <h3 class="modal-title" id="exampleModalLong">Add Lesson form</h3>-->
+<!--                        </div>-->
+<!--                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                            <span aria-hidden="true">&times;</span>-->
+<!--                        </button>-->
+<!--                    </div>-->
+
+<!--&lt;!&ndash;                    đang viết &ndash;&gt;-->
+<!--                    <form th:action="@{'/adminTrainer/'+${courseEdit.id}+'/saveLesson'}" th:object="${lessonEditDTO}" enctype="multipart/form-data" method="post">-->
+<!--                    <div class="modal-body">-->
+<!--                            <div class="mb-3">-->
+<!--                                <label for="number" class="form-label">Number lesson</label>-->
+<!--                                <input th:field="*{number}" type="text" class="form-control" id="number" placeholder="Title">-->
+<!--                            </div>-->
+<!--                            <hr>-->
+<!--                            <div class="mb-5">-->
+<!--                                <label for="title" class="form-label">Title</label>-->
+<!--                                <textarea th:field="*{title}" class="form-control" id="title" placeholder="Description"></textarea>-->
+<!--                            </div>-->
+<!--                            <hr>-->
+<!--                            <div class="mb-3">-->
+<!--                                <h3 class="fs-5">Choose Video lesson</h3>-->
+<!--                                <input name="videoLessonEdit" type="file" >-->
+<!--                           </div>-->
+<!--                            <hr>-->
+<!--                       </div>-->
+<!--                        <hr>-->
+<!--                        <div class="modal-footer">-->
+<!--                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--                            <button type="submit" class="btn btn-primary">Create</button>-->
+<!--                        </div>-->
+<!--                    </form>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+        <!--END Modal add lesson-->
+
+
+
+        <div class="card-body">
+            <div class="table-responsive">
+                <table
+                        class="table table-bordered table-striped align-items-center text-center"
+                        id="dataTable"
+                        width="100%"
+                        cellspacing="0"
+                >
+                    <thead>
+                    <tr>
+                        <th class="col-1">Number Lesson</th>
+                        <th class="col-3">Lesson Title</th>
+                        <th class="col-3">Video</th>
+                        <th class="col-2">Action</th>
+
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+
+                        <th>Number Lesson</th>
+                        <th>Lesson Title</th>
+                        <th>Video</th>
+                        <th>Action</th>
+
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    <tr th:each="list : ${listLesson}">
+                        <td th:text="${list.number}"></td>
+                        <td th:text="${list.title}"></td>
+                        <td>
+                            <video th:src="@{'/getVideo/'+${list.video}}"
+                                   class="custom-video" controls></video>
+                        </td>
+
+                        <td>
+
+                            <div class="mt-3">
+                                <a th:href="@{'/adminTrainer/' + ${courseEdit.id} + '/updateLesson/' + ${list.id}}" class="btn btn-info btn-circle btn-sm ">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+
+                                <a class="btn btn-danger btn-circle btn-sm"
+                                   th:href="@{'/adminTrainer/' + ${courseEdit.id} + '/deleteLesson/' + ${list.id}}"
+                                   th:onclick="return confirm('Are you sure you want to DELETE this Lesson?')">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                            <br>
+
+                            <a th:href="@{'/adminTrainer/addQuiz/' + ${list.id}}" class="btn btn-primary btn-sm rounded-pill my-1">
+                                <span class="label label-danger m-0 p-1">Add quiz excel file</span>
+                            </a>
+
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Add your CSS and other head elements here -->
+</head>
+<body>
+
+<!-- Your existing HTML content -->
+
+<div id="trainerSalaryContainer">
+    <!-- Display trainer salary information here using Thymeleaf -->
+    <ul th:each="trainerSalary : ${trainerSalaries}">
+        <li th:text="${trainerSalary.name} + ' - ' + ${trainerSalary.salary}"></li>
+    </ul>
+</div>
+
+<button id="loadTrainerSalariesButton">Load Trainer Salaries</button>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script th:inline="javascript">
+
+    $(document).ready(function () {
+        $("#loadTrainerSalariesButton").on("click", function () {
+            getAllTrainerSalaryPaid();
+        });
+
+        function getAllTrainerSalaryPaid() {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:9091/salarypaids",
+                dataType: "json",
+                success: function (data) {
+                    // Update the Thymeleaf container with the new data
+                    updateTrainerSalaryContainer(data);
+                },
+                error: function (error) {
+                    console.error("Error loading trainer salaries: " + error);
+                }
+            });
+        }
+
+        function updateTrainerSalaryContainer(data) {
+            // Use Thymeleaf to update the container with new data
+            var container = $("#trainerSalaryContainer");
+            container.empty();
+
+            $.each(data, function (index, trainerSalary) {
+                container.append("<li>" + trainerSalary.name + " - " + trainerSalary.salary + "</li>");
+            });
+        }
+    });
+
+</script>
+
+<!-- Add your other scripts and closing body/html tags here -->
+
+</body>
+</html>

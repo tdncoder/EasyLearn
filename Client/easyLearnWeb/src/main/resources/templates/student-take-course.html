@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+    
+<!-- Mirrored from luma.humatheme.com/Demos/Fixed_Layout/student-take-course.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 14:39:20 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible"
+              content="IE=edge">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Course</title>
+
+        <!-- Prevent the demo from appearing in search engines -->
+        <meta name="robots"
+              content="noindex">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap"
+              rel="stylesheet">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css" th:href="@{/vendor/spinkit.css}" rel="stylesheet">
+
+        <!-- Perfect Scrollbar -->
+        <link type="text/css" th:href="@{/vendor/perfect-scrollbar.css}" rel="stylesheet">
+
+        <!-- Material Design Icons -->
+        <link type="text/css" th:href="@{/css/material-icons.css}" rel="stylesheet">
+
+        <!-- Font Awesome Icons -->
+        <link type="text/css" th:href="@{/css/fontawesome.css}" rel="stylesheet">
+
+        <!-- Preloader -->
+        <link type="text/css" th:href="@{/css/preloader.css}" rel="stylesheet">
+
+        <!-- App CSS -->
+        <link type="text/css" th:href="@{/css/app.css}" rel="stylesheet">
+
+    </head>
+
+    <body class="layout-sticky-subnav layout-default ">
+
+        <div class="preloader">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+
+            <!-- <div class="sk-bounce">
+    <div class="sk-bounce-dot"></div>
+    <div class="sk-bounce-dot"></div>
+  </div> -->
+
+            <!-- More spinner examples at https://github.com/tobiasahlin/SpinKit/blob/master/examples.html -->
+        </div>
+
+        <!-- Header Layout -->
+        <div class="mdk-header-layout js-mdk-header-layout">
+
+            <!-- Header -->
+
+            <div id="header"
+                 class="mdk-header js-mdk-header mb-0"
+                 data-fixed
+                 data-effects="">
+                <div class="mdk-header__content">
+
+                    <!-- Navbar -->
+
+                    <div class="navbar navbar-expand pr-0 navbar-dark-pickled-bluewood navbar-shadow"
+                         id="default-navbar"
+                         data-primary>
+
+                        <!-- Navbar Toggler -->
+
+                        <button class="navbar-toggler w-auto mr-16pt d-block rounded-0"
+                                type="button"
+                                data-toggle="sidebar">
+                            <span class="material-icons"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        </button>
+
+                        <!-- // END Navbar Toggler -->
+
+                        <!-- Navbar Brand -->
+
+                        <a href="index.html"
+                           class="navbar-brand mr-16pt">
+
+                            <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+                                <span class="avatar-title rounded bg-primary"><img th:src="@{/img/illustration/achievement/128/white.png}"
+                                         alt="logo"
+                                         class="img-fluid" /></span>
+
+                            </span>
+
+                            <span class="d-none d-lg-block">EasyLearn</span>
+                        </a>
+
+                        <!-- // END Navbar Brand -->
+
+                        <span class="d-none d-md-flex align-items-center mr-16pt">
+
+                            <span class="avatar avatar-sm mr-12pt">
+
+                                <span class="avatar-title rounded navbar-avatar"><i class="material-icons"><i class="fa-solid fa-trophy"></i></i></span>
+
+                            </span>
+
+                            <small class="flex d-flex flex-column">
+                                <strong class="navbar-text-100">Experience IQ</strong>
+                                <span class="navbar-text-50">2,300 points</span>
+                            </small>
+                        </span>
+
+                        <!-- Navbar Search -->
+
+                        <form class="search-form navbar-search d-none d-md-flex mr-16pt"
+                              action="https://luma.humatheme.com/Demos/Fixed_Layout/index.html">
+                            <button class="btn"
+                                    type="submit"><i class="material-icons"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Search ...">
+                        </form>
+
+                        <!-- // END Navbar Search -->
+
+                        <div class="flex"></div>
+
+                        <!-- Navbar Menu -->
+
+                        <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
+
+                            <!-- Notifications dropdown -->
+                            <div class="nav-item dropdown dropdown-notifications dropdown-xs-down-full"
+                                 data-toggle="tooltip"
+                                 data-title="Messages"
+                                 data-placement="bottom"
+                                 data-boundary="window">
+                                <button class="nav-link btn-flush dropdown-toggle"
+                                        type="button"
+                                        data-toggle="dropdown"
+                                        data-caret="false">
+                                    <i class="material-icons icon-24pt"><i class="fa-solid fa-comment"></i></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <div data-perfect-scrollbar
+                                         class="position-relative">
+                                        <div class="dropdown-header"><strong>Messages</strong></div>
+                                        <div class="list-group list-group-flush mb-0">
+
+                                            <a href="javascript:void(0);"
+                                               class="list-group-item list-group-item-action unread">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">5 minutes ago</small>
+
+                                                    <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                                </span>
+                                                <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <img th:src="@{/img/people/110/woman-5.jpg}"
+                                                             alt="people"
+                                                             class="avatar-img rounded-circle">
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="text-black-100">Michelle</strong>
+                                                        <span class="text-black-70">Clients loved the new design.</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <a href="javascript:void(0);"
+                                               class="list-group-item list-group-item-action">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">5 minutes ago</small>
+
+                                                </span>
+                                                <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <img th:src="@{/img/people/110/woman-5.jpg}"
+                                                             alt="people"
+                                                             class="avatar-img rounded-circle">
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="text-black-100">Michelle</strong>
+                                                        <span class="text-black-70">🔥 Superb job..</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // END Notifications dropdown -->
+
+                            <!-- Notifications dropdown -->
+                            <div class="nav-item ml-16pt dropdown dropdown-notifications dropdown-xs-down-full"
+                                 data-toggle="tooltip"
+                                 data-title="Notifications"
+                                 data-placement="bottom"
+                                 data-boundary="window">
+                                <button class="nav-link btn-flush dropdown-toggle"
+                                        type="button"
+                                        data-toggle="dropdown"
+                                        data-caret="false">
+                                    <i class="material-icons"><i class="fa-solid fa-bell"></i></i>
+                                    <span class="badge badge-notifications badge-accent">2</span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <div data-perfect-scrollbar
+                                         class="position-relative">
+                                        <div class="dropdown-header"><strong>System notifications</strong></div>
+                                        <div class="list-group list-group-flush mb-0">
+
+                                            <a href="javascript:void(0);"
+                                               class="list-group-item list-group-item-action unread">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">3 minutes ago</small>
+
+                                                    <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                                </span>
+                                                <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <span class="avatar-title rounded-circle bg-light">
+                                                            <i class="material-icons font-size-16pt text-accent"><i class="fa-solid fa-circle-user"></i></i>
+                                                        </span>
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+
+                                                        <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <a href="javascript:void(0);"
+                                               class="list-group-item list-group-item-action">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">5 hours ago</small>
+
+                                                </span>
+                                                <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <span class="avatar-title rounded-circle bg-light">
+                                                            <i class="material-icons font-size-16pt text-primary"><i class="fa-solid fa-user-plus"></i></i>
+                                                        </span>
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="text-black-100">Adrian. D</strong>
+                                                        <span class="text-black-70">Wants to join your private group.</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <a href="javascript:void(0);"
+                                               class="list-group-item list-group-item-action">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">1 day ago</small>
+
+                                                </span>
+                                                <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <span class="avatar-title rounded-circle bg-light">
+                                                            <i class="material-icons font-size-16pt text-warning"><i class="fa-solid fa-database"></i></i>
+                                                        </span>
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+
+                                                        <span class="text-black-70">Your deploy was successful.</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- // END Notifications dropdown -->
+
+                            <div class="nav-item dropdown">
+                                <a href="#"
+                                   class="nav-link d-flex align-items-center dropdown-toggle"
+                                   data-toggle="dropdown"
+                                   data-caret="false">
+
+                                    <span class="avatar avatar-sm mr-8pt2">
+
+                                        <span class="avatar-title rounded-circle bg-primary"><i class="material-icons"><i class="fa-solid fa-user"></i></i></span>
+
+                                    </span>
+
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <div class="dropdown-header"><strong>Account</strong></div>
+                                    <a class="dropdown-item"
+                                       href="edit-account.html">Edit Account</a>
+                                    <a class="dropdown-item"
+                                       href="billing.html">Billing</a>
+                                    <a class="dropdown-item"
+                                       href="billing-history.html">Payments</a>
+                                    <a class="dropdown-item"
+                                       href="login.html">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- // END Navbar Menu -->
+
+                    </div>
+
+                    <!-- // END Navbar -->
+
+                </div>
+            </div>
+
+            <!-- // END Header -->
+
+            <!-- Header Layout Content -->
+            <div class="mdk-header-layout__content page-content ">
+
+                <div class="mdk-box bg-primary mdk-box--bg-gradient-primary2 js-mdk-box mb-0"
+                     data-effects="blend-background">
+                    <div class="mdk-box__content">
+                        <div class="hero py-64pt text-center text-sm-left">
+                            <div class="container page__container">
+                                <h1 class="text-white" th:text="${registeredCourse.title}"></h1>
+                                <p class="lead text-white-50 measure-hero-lead mb-24pt" th:text="${registeredCourse.description}"></p>
+                                <a  th:href="@{'/student-course/lesson/' + ${registeredCourse.id}}"
+                                   class="btn btn-white">Resume course</a>
+                            </div>
+                        </div>
+                        <div class="navbar navbar-expand-sm navbar-light bg-white border-bottom-2 navbar-list p-0 m-0 align-items-center">
+                            <div class="container page__container">
+                                <ul class="nav navbar-nav flex align-items-sm-center">
+                                    <li class="nav-item navbar-list__item">
+                                        <div class="media align-items-center">
+                                            <span class="media-left mr-16pt">
+                                                <img th:src="@{/img/people/50/guy-6.jpg}"
+                                                     width="40"
+                                                     alt="avatar"
+                                                     class="rounded-circle">
+                                            </span>
+                                            <div class="media-body">
+                                                <a class="card-title m-0"
+                                                   href="teacher-profile.html">Eddie Bryan</a>
+                                                <p class="text-50 lh-1 mb-0">Instructor</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item navbar-list__item">
+                                        <i class="material-icons text-muted icon--left"><i class="fa-solid fa-clock"></i></i>
+                                        2h 46m
+                                    </li>
+                                    <li class="nav-item navbar-list__item">
+                                        <i class="material-icons text-muted icon--left"><i class="fa-solid fa-ranking-star"></i></i>
+                                        Beginner
+                                    </li>
+                                    <li class="nav-item ml-sm-auto text-sm-center flex-column navbar-list__item">
+                                        <div class="rating rating-24">
+                                            <div class="rating__item"><i class="material-icons"><i class="fa-solid fa-star"></i></i></div>
+                                            <div class="rating__item"><i class="material-icons"><i class="fa-solid fa-star"></i></i></div>
+                                            <div class="rating__item"><i class="material-icons"><i class="fa-solid fa-star"></i></i></div>
+                                            <div class="rating__item"><i class="material-icons"><i class="fa-solid fa-star"></i></i></div>
+                                            <div class="rating__item"><i class="material-icons"><i class="fa-solid fa-star"></i></i></div>
+                                        </div>
+                                        <p class="lh-1 mb-0"><small class="text-muted" th:text="${registeredCourse.rating} + ' ratings '"></small></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container page__container">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="border-left-2 page-section pl-32pt">
+
+                                <div class="d-flex align-items-center page-num-container">
+                                    <div class="page-num">1</div>
+                                    <h4>Getting Started With Angular</h4>
+                                </div>
+
+                                <p class="text-70 mb-24pt">Good tools make application development quick*er and easier to maintain than* if you did everything by hand. The goal in this guide is to build and run a simple Angular application in TypeScript, using the Angular CLI while adhering to the Style Guide recommendations that benefit every Angular project.</p>
+
+                                <div class="card mb-32pt mb-lg-64pt">
+                                    <ul class="accordion accordion--boxed js-accordion mb-0"
+                                        id="toc-1">
+                                        <li class="accordion__item open">
+                                            <a class="accordion__toggle"
+                                               data-toggle="collapse"
+                                               data-parent="#toc-1"
+                                               href="#toc-content-1">
+                                                <span class="flex">1 of 4 Steps</span>
+                                                <span class="accordion__toggle-icon material-icons"><i class="fa-solid fa-chevron-down"></i></span>
+                                            </a>
+                                            <div class="accordion__menu">
+                                                <ul class="list-unstyled collapse show"
+                                                    id="toc-content-1">
+                                                    <li class="accordion__menu-link">
+                                                        <span class="material-icons icon-16pt icon--left text-body"><i class="fa-solid fa-circle-check"></i></span>
+                                                        <a class="flex"
+                                                           href="student-take-lesson.html">Introduction</a>
+                                                        <span class="text-muted">8m 42s</span>
+                                                    </li>
+                                                    <li class="accordion__menu-link">
+                                                        <span class="material-icons icon-16pt icon--left text-body"><i class="fa-solid fa-circle-play"></i></span>
+                                                        <a class="flex"
+                                                           href="student-take-lesson.html">Introduction to TypeScript</a>
+                                                        <span class="text-muted">50m 13s</span>
+                                                    </li>
+                                                    <li class="accordion__menu-link">
+                                                        <span class="material-icons icon-16pt icon--left text-body"><i class="fa-solid fa-circle-play"></i></span>
+                                                        <a class="flex"
+                                                           href="student-take-lesson.html">Comparing Angular to AngularJS</a>
+                                                        <span class="text-muted">12m 10s</span>
+                                                    </li>
+                                                    <li class="accordion__menu-link">
+                                                        <span class="material-icons icon-16pt icon--left text-50"><i class="fa-solid fa-book-open"></i></span>
+                                                        <a class="flex"
+                                                           href="student-take-quiz.html">Quiz: Getting Started With Angular</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="d-flex align-items-center page-num-container">
+                                    <div class="page-num">2</div>
+                                    <h4>Creating and Communicating Between Angular Components</h4>
+                                </div>
+                                <p class="text-70 mb-24pt">Data sharing is an essential concept to understand before diving into your first Angular project. In this section, you will learn four different methods for sharing data between Angular components.</p>
+
+                                <div class="card mb-0">
+                                    <ul class="accordion accordion--boxed js-accordion mb-0"
+                                        id="toc-2">
+                                        <li class="accordion__item">
+                                            <a class="accordion__toggle"
+                                               data-toggle="collapse"
+                                               data-parent="#toc-2"
+                                               href="#toc-content-2">
+                                                <span class="flex">6 Steps</span>
+                                                <span class="accordion__toggle-icon material-icons"><i class="fa-solid fa-chevron-down"></i></span>
+                                            </a>
+                                            <div class="accordion__menu">
+                                                <ul class="list-unstyled collapse"
+                                                    id="toc-content-2">
+                                                    <li class="accordion__menu-link">
+                                                        <span class="material-icons icon-16pt icon--left text-body"><i class="fa-solid fa-circle-check"></i></span>
+                                                        <a class="flex"
+                                                           href="student-take-lesson.html">Introduction</a>
+                                                        <span class="text-muted">8m 42s</span>
+                                                    </li>
+                                                    <li class="accordion__menu-link">
+                                                        <span class="material-icons icon-16pt icon--left text-body"><i class="fa-solid fa-circle-play"></i></span>
+                                                        <a class="flex"
+                                                           href="student-take-lesson.html">Introduction to TypeScript</a>
+                                                        <span class="text-muted">50m 13s</span>
+                                                    </li>
+                                                    <li class="accordion__menu-link">
+                                                        <span class="material-icons icon-16pt icon--left text-body"><i class="fa-solid fa-circle-play"></i></span>
+                                                        <a class="flex"
+                                                           href="student-take-lesson.html">Comparing Angular to AngularJS</a>
+                                                        <span class="text-muted">12m 10s</span>
+                                                    </li>
+                                                    <li class="accordion__menu-link">
+                                                        <span class="material-icons icon-16pt icon--left text-50"><i class="fa-solid fa-book-open"></i></span>
+                                                        <a class="flex"
+                                                           href="student-take-quiz.html">Quiz: Getting Started With Angular</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-5 page-nav">
+                            <div class="page-section">
+                                <div class="page-nav__content">
+                                    <div class="page-separator">
+                                        <div class="page-separator__text">Table of contents</div>
+                                    </div>
+                                    <!-- <h4 class="mb-16pt">Table of contents</h4> -->
+                                </div>
+                                <nav class="nav page-nav__menu">
+                                    <a class="nav-link active"
+                                       href="#">Getting Started With Angular</a>
+                                    <a class="nav-link"
+                                       href="#">Creating and Communicating Between Angular Components</a>
+                                    <a class="nav-link"
+                                       href="#">Exploring the Angular Template Syntax</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-section bg-alt border-top-2 border-bottom-2">
+
+                    <div class="container page__container">
+                        <div class="row ">
+                            <div class="col-md-7">
+                                <div class="page-separator">
+                                    <div class="page-separator__text">About this course</div>
+                                </div>
+                                <p class="text-70">This course will teach you the fundamentals o*f working with Angular 2. You *will learn everything you need to know to create complete applications including: components, services, directives, pipes, routing, HTTP, and even testing.</p>
+                                <p class="text-70 mb-0">This course will teach you the fundamentals o*f working with Angular 2. You *will learn everything you need to know to create complete applications including: components, services, directives, pipes, routing, HTTP, and even testing.</p>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="page-separator">
+                                    <div class="page-separator__text bg-alt">What you’ll learn</div>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li class="d-flex align-items-center">
+                                        <span class="material-icons text-50 mr-8pt"><i class="fa-solid fa-circle-check"></i></span>
+                                        <span class="text-70">Fundamentals of working with Angular</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <span class="material-icons text-50 mr-8pt"><i class="fa-solid fa-circle-check"></i></span>
+                                        <span class="text-70">Create complete Angular applications</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <span class="material-icons text-50 mr-8pt"><i class="fa-solid fa-circle-check"></i></span>
+                                        <span class="text-70">Working with the Angular CLI</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <span class="material-icons text-50 mr-8pt"><i class="fa-solid fa-circle-check"></i></span>
+                                        <span class="text-70">Understanding Dependency Injection</span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                        <span class="material-icons text-50 mr-8pt"><i class="fa-solid fa-circle-check"></i></span>
+                                        <span class="text-70">Testing with Angular</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="page-section bg-alt border-bottom-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-7 mb-24pt mb-md-0">
+                                <h4>About the author</h4>
+                                <p class="text-70 mb-24pt">Eddie Bryan is a software developer at LearnD*ash. With more than 20 years o*f software development experience, he has gained a passion for Agile software development -- especially Lean.</p>
+
+                                <div class="page-separator">
+                                    <div class="page-separator__text bg-white">More from the author</div>
+                                </div>
+
+                                <div class="card card-sm mb-8pt">
+                                    <div class="card-body d-flex align-items-center">
+                                        <a href="course.html"
+                                           class="avatar avatar-4by3 mr-12pt">
+                                            <img th:src="@{/img/paths/angular_routing_200x168.png}"
+                                                 alt="Angular Routing In-Depth"
+                                                 class="avatar-img rounded">
+                                        </a>
+                                        <div class="flex">
+                                            <a class="card-title mb-4pt"
+                                               href="course.html">Angular Routing In-Depth</a>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rating mr-8pt">
+
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+
+                                                </div>
+                                                <small class="text-muted">3/5</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card card-sm mb-16pt">
+                                    <div class="card-body d-flex align-items-center">
+                                        <a href="course.html"
+                                           class="avatar avatar-4by3 mr-12pt">
+                                            <img th:src="@{/img/paths/angular_testing_200x168.png}"
+                                                 alt="Angular Unit Testing"
+                                                 class="avatar-img rounded">
+                                        </a>
+                                        <div class="flex">
+                                            <a class="card-title mb-4pt"
+                                               href="course.html">Angular Unit Testing</a>
+                                            <div class="d-flex align-items-center">
+                                                <div class="rating mr-8pt">
+
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+
+                                                </div>
+                                                <small class="text-muted">4/5</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="list-group list-group-flush">
+                                    <div class="list-group-item px-0">
+                                        <a href="#"
+                                           class="card-title mb-4pt">Angular Best Practices</a>
+                                        <p class="lh-1 mb-0">
+                                            <small class="text-muted mr-8pt">6h 40m</small>
+                                            <small class="text-muted mr-8pt">13,876 Views</small>
+                                            <small class="text-muted">13 May 2018</small>
+                                        </p>
+                                    </div>
+                                    <div class="list-group-item px-0">
+                                        <a href="#"
+                                           class="card-title mb-4pt">Unit Testing in Angular</a>
+                                        <p class="lh-1 mb-0">
+                                            <small class="text-muted mr-8pt">6h 40m</small>
+                                            <small class="text-muted mr-8pt">13,876 Views</small>
+                                            <small class="text-muted">13 May 2018</small>
+                                        </p>
+                                    </div>
+                                    <div class="list-group-item px-0">
+                                        <a href="#"
+                                           class="card-title mb-4pt">Migrating Applications from AngularJS to Angular</a>
+                                        <p class="lh-1 mb-0">
+                                            <small class="text-muted mr-8pt">6h 40m</small>
+                                            <small class="text-muted mr-8pt">13,876 Views</small>
+                                            <small class="text-muted">13 May 2018</small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 pt-sm-32pt pt-md-0 d-flex flex-column align-items-center justify-content-start">
+                                <div class="text-center">
+                                    <p class="mb-16pt">
+                                        <img th:src="@{/img/people/110/guy-6.jpg}"
+                                             alt="guy-6"
+                                             class="rounded-circle"
+                                             width="64">
+                                    </p>
+                                    <h4 class="m-0">Eddie Bryan</h4>
+                                    <p class="lh-1">
+                                        <small class="text-muted">Angular, Web Development</small>
+                                    </p>
+                                    <div class="d-flex flex-column flex-sm-row align-items-center justify-content-start">
+                                        <a href="teacher-profile.html"
+                                           class="btn btn-outline-primary mb-16pt mb-sm-0 mr-sm-16pt">Follow</a>
+                                        <a href="teacher-profile.html"
+                                           class="btn btn-outline-secondary">View Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-section border-bottom-2">
+                    <div class="container">
+                        <div class="page-headline text-center">
+                            <h2>Feedback</h2>
+                            <p class="lead text-70 measure-lead mx-auto">What other students turned professionals have to say about us after learning with us and reaching their goals.</p>
+                        </div>
+
+                        <div class="position-relative carousel-card p-0 mx-auto">
+                            <div class="row d-block js-mdk-carousel"
+                                 id="carousel-feedback">
+                                <a class="carousel-control-next js-mdk-carousel-control mt-n24pt"
+                                   href="#carousel-feedback"
+                                   role="button"
+                                   data-slide="next">
+                                    <span class="carousel-control-icon material-icons"
+                                          aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                                <div class="mdk-carousel__content">
+
+                                    <div class="col-12 col-md-6">
+
+                                        <div class="card card-feedback card-body">
+                                            <blockquote class="blockquote mb-0">
+                                                <p class="text-70 small mb-0">A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.</p>
+                                            </blockquote>
+                                        </div>
+                                        <div class="media ml-12pt">
+                                            <div class="media-left mr-12pt">
+                                                <a href="student-profile.html"
+                                                   class="avatar avatar-sm">
+                                                    <!-- <img src="../../public/images/people/110/guy-.jpg" width="40" alt="avatar" class="rounded-circle"> -->
+                                                    <span class="avatar-title rounded-circle">UK</span>
+                                                </a>
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <a href="student-profile.html"
+                                                   class="card-title">Umberto Kass</a>
+                                                <div class="rating mt-4pt">
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+
+                                        <div class="card card-feedback card-body">
+                                            <blockquote class="blockquote mb-0">
+                                                <p class="text-70 small mb-0">A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.</p>
+                                            </blockquote>
+                                        </div>
+                                        <div class="media ml-12pt">
+                                            <div class="media-left mr-12pt">
+                                                <a href="student-profile.html"
+                                                   class="avatar avatar-sm">
+                                                    <!-- <img src="../../public/images/people/110/guy-.jpg" width="40" alt="avatar" class="rounded-circle"> -->
+                                                    <span class="avatar-title rounded-circle">UK</span>
+                                                </a>
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <a href="student-profile.html"
+                                                   class="card-title">Umberto Kass</a>
+                                                <div class="rating mt-4pt">
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-md-6">
+
+                                        <div class="card card-feedback card-body">
+                                            <blockquote class="blockquote mb-0">
+                                                <p class="text-70 small mb-0">A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.</p>
+                                            </blockquote>
+                                        </div>
+                                        <div class="media ml-12pt">
+                                            <div class="media-left mr-12pt">
+                                                <a href="student-profile.html"
+                                                   class="avatar avatar-sm">
+                                                    <!-- <img src="../../public/images/people/110/guy-.jpg" width="40" alt="avatar" class="rounded-circle"> -->
+                                                    <span class="avatar-title rounded-circle">UK</span>
+                                                </a>
+                                            </div>
+                                            <div class="media-body media-middle">
+                                                <a href="student-profile.html"
+                                                   class="card-title">Umberto Kass</a>
+                                                <div class="rating mt-4pt">
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-section bg-alt border-bottom-2">
+
+                    <div class="container page__container">
+                        <div class="page-separator">
+                            <div class="page-separator__text">Student Feedback</div>
+                        </div>
+                        <div class="row mb-32pt">
+                            <div class="col-md-3 mb-32pt mb-md-0">
+                                <div class="display-1">4.7</div>
+                                <div class="rating rating-24">
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                </div>
+                                <p class="text-muted mb-0">20 ratings</p>
+                            </div>
+                            <div class="col-md-9">
+
+                                <div class="row align-items-center mb-8pt"
+                                     data-toggle="tooltip"
+                                     data-title="75% rated 5/5"
+                                     data-placement="top">
+                                    <div class="col-md col-sm-6">
+                                        <div class="progress"
+                                             style="height: 8px;">
+                                            <div class="progress-bar bg-secondary"
+                                                 role="progressbar"
+                                                 aria-valuenow="75"
+                                                 style="width: 75%"
+                                                 aria-valuemin="0"
+                                                 aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-auto col-sm-6 d-none d-sm-flex align-items-center">
+                                        <div class="rating">
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mb-8pt"
+                                     data-toggle="tooltip"
+                                     data-title="16% rated 4/5"
+                                     data-placement="top">
+                                    <div class="col-md col-sm-6">
+                                        <div class="progress"
+                                             style="height: 8px;">
+                                            <div class="progress-bar bg-secondary"
+                                                 role="progressbar"
+                                                 aria-valuenow="16"
+                                                 style="width: 16%"
+                                                 aria-valuemin="0"
+                                                 aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-auto col-sm-6 d-none d-sm-flex align-items-center">
+                                        <div class="rating">
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mb-8pt"
+                                     data-toggle="tooltip"
+                                     data-title="12% rated 3/5"
+                                     data-placement="top">
+                                    <div class="col-md col-sm-6">
+                                        <div class="progress"
+                                             style="height: 8px;">
+                                            <div class="progress-bar bg-secondary"
+                                                 role="progressbar"
+                                                 aria-valuenow="12"
+                                                 style="width: 12%"
+                                                 aria-valuemin="0"
+                                                 aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-auto col-sm-6 d-none d-sm-flex align-items-center">
+                                        <div class="rating">
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mb-8pt"
+                                     data-toggle="tooltip"
+                                     data-title="9% rated 2/5"
+                                     data-placement="top">
+                                    <div class="col-md col-sm-6">
+                                        <div class="progress"
+                                             style="height: 8px;">
+                                            <div class="progress-bar bg-secondary"
+                                                 role="progressbar"
+                                                 aria-valuenow="9"
+                                                 style="width: 9%"
+                                                 aria-valuemin="0"
+                                                 aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-auto col-sm-6 d-none d-sm-flex align-items-center">
+                                        <div class="rating">
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row align-items-center mb-8pt"
+                                     data-toggle="tooltip"
+                                     data-title="0% rated 0/5"
+                                     data-placement="top">
+                                    <div class="col-md col-sm-6">
+                                        <div class="progress"
+                                             style="height: 8px;">
+                                            <div class="progress-bar bg-secondary"
+                                                 role="progressbar"
+                                                 aria-valuenow="0"
+                                                 aria-valuemin="0"
+                                                 aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-auto col-sm-6 d-none d-sm-flex align-items-center">
+                                        <div class="rating">
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="pb-16pt mb-16pt border-bottom row">
+                            <div class="col-md-3 mb-16pt mb-md-0">
+                                <div class="d-flex">
+                                    <a href="student-profile.html"
+                                       class="avatar avatar-sm mr-12pt">
+                                        <!-- <img src="LB" alt="avatar" class="avatar-img rounded-circle"> -->
+                                        <span class="avatar-title rounded-circle">LB</span>
+                                    </a>
+                                    <div class="flex">
+                                        <p class="small text-muted m-0">2 days ago</p>
+                                        <a href="student-profile.html"
+                                           class="card-title">Laza Bogdan</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="rating mb-8pt">
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                </div>
+                                <p class="text-70 mb-0">A wonderful course on how to start. Eddie beautifully conveys all essentials of a becoming a good Angular developer. Very glad to have taken this course. Thank you Eddie Bryan.</p>
+                            </div>
+                        </div>
+
+                        <div class="pb-16pt mb-16pt border-bottom row">
+                            <div class="col-md-3 mb-16pt mb-md-0">
+                                <div class="d-flex">
+                                    <a href="student-profile.html"
+                                       class="avatar avatar-sm mr-12pt">
+                                        <!-- <img src="UK" alt="avatar" class="avatar-img rounded-circle"> -->
+                                        <span class="avatar-title rounded-circle">UK</span>
+                                    </a>
+                                    <div class="flex">
+                                        <p class="small text-muted m-0">2 days ago</p>
+                                        <a href="student-profile.html"
+                                           class="card-title">Umberto Klass</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="rating mb-8pt">
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                </div>
+                                <p class="text-70 mb-0">This course is absolutely amazing, Bryan goes* out of his way to really explain things clearly I couldn&#39;t be happier, so glad I made this purchase!</p>
+                            </div>
+                        </div>
+
+                        <div class="pb-16pt mb-24pt row">
+                            <div class="col-md-3 mb-16pt mb-md-0">
+                                <div class="d-flex">
+                                    <a href="student-profile.html"
+                                       class="avatar avatar-sm mr-12pt">
+                                        <!-- <img src="AD" alt="avatar" class="avatar-img rounded-circle"> -->
+                                        <span class="avatar-title rounded-circle">AD</span>
+                                    </a>
+                                    <div class="flex">
+                                        <p class="small text-muted m-0">2 days ago</p>
+                                        <a href="student-profile.html"
+                                           class="card-title">Adrian Demian</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="rating mb-8pt">
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                    <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                </div>
+                                <p class="text-70 mb-0">This course is absolutely amazing, Bryan goes out of his way to really expl*ain things clearly I couldn&#39;t be happier, so glad I made this purchase!</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="page-section">
+                    <div class="container page__container">
+                        <div class="page-heading">
+                            <h4>Top Courses</h4>
+                            <a href="#"
+                               class="text-underline ml-sm-auto">See Courses</a>
+                        </div>
+
+                        <div class="position-relative carousel-card">
+                            <div class="js-mdk-carousel row d-block"
+                                 id="carousel-courses1">
+
+                                <a class="carousel-control-next js-mdk-carousel-control mt-n24pt"
+                                   href="#carousel-courses1"
+                                   role="button"
+                                   data-slide="next">
+                                    <span class="carousel-control-icon material-icons"
+                                          aria-hidden="true"><i class="fa-solid fa-chevron-right"></i></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+
+                                <div class="mdk-carousel__content">
+
+                                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+
+                                        <div class="card card-sm card--elevated p-relative o-hidden overlay overlay--primary-dodger-blue js-overlay mdk-reveal js-mdk-reveal "
+                                             data-partial-height="44"
+                                             data-toggle="popover"
+                                             data-trigger="click">
+
+                                            <a href="student-course.html"
+                                               class="js-image"
+                                               data-position="">
+                                                <img th:src="@{/img/paths/angular_430x168.png}"
+                                                     alt="course">
+                                                <span class="overlay__content align-items-start justify-content-start">
+                                                    <span class="overlay__action card-body d-flex align-items-center">
+                                                        <i class="material-icons mr-4pt"><i class="fa-solid fa-circle-check"></i></i>
+                                                        <span class="card-title text-white">Preview</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <span class="corner-ribbon corner-ribbon--default-right-top corner-ribbon--shadow bg-accent text-white">NEW</span>
+
+                                            <div class="mdk-reveal__content">
+                                                <div class="card-body">
+                                                    <div class="d-flex">
+                                                        <div class="flex">
+                                                            <a class="card-title"
+                                                               href="student-course.html">Learn Angular fundamentals</a>
+                                                            <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                        </div>
+                                                        <a href="student-course.html"
+                                                           data-toggle="tooltip"
+                                                           data-title="Add Favorite"
+                                                           data-placement="top"
+                                                           data-boundary="window"
+                                                           class="ml-4pt material-icons text-20 card-course__icon-favorite"><i class="fa-regular fa-heart"></i></a>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="rating flex">
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                                        </div>
+                                                        <small class="text-50">6 hours</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popoverContainer d-none">
+                                            <div class="media">
+                                                <div class="media-left mr-12pt">
+                                                    <img th:src="@{/img/paths/angular_40x40.png}"
+                                                         width="40"
+                                                         height="40"
+                                                         alt="Angular"
+                                                         class="rounded">
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="card-title mb-0">Learn Angular fundamentals</div>
+                                                    <p class="lh-1 mb-0">
+                                                        <span class="text-50 small">with</span>
+                                                        <span class="text-50 small font-weight-bold">Elijah Murray</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <p class="my-16pt text-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                            <div class="mb-16pt">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-clock"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-circle-play"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-ranking-star"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col text-right">
+                                                    <a href="student-course.html"
+                                                       class="btn btn-primary">See Course</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+
+                                        <div class="card card-sm card--elevated p-relative o-hidden overlay overlay--primary-dodger-blue js-overlay mdk-reveal js-mdk-reveal "
+                                             data-partial-height="44"
+                                             data-toggle="popover"
+                                             data-trigger="click">
+
+                                            <a href="student-course.html"
+                                               class="js-image"
+                                               data-position="">
+                                                <img th:src="@{/img/paths/swift_430x168.png}"
+                                                     alt="course">
+                                                <span class="overlay__content align-items-start justify-content-start">
+                                                    <span class="overlay__action card-body d-flex align-items-center">
+                                                        <i class="material-icons mr-4pt"><i class="fa-solid fa-circle-play"></i></i>
+                                                        <span class="card-title text-white">Preview</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <div class="mdk-reveal__content">
+                                                <div class="card-body">
+                                                    <div class="d-flex">
+                                                        <div class="flex">
+                                                            <a class="card-title"
+                                                               href="student-course.html">Build an iOS Application in Swift</a>
+                                                            <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                        </div>
+                                                        <a href="student-course.html"
+                                                           data-toggle="tooltip"
+                                                           data-title="Remove Favorite"
+                                                           data-placement="top"
+                                                           data-boundary="window"
+                                                           class="ml-4pt material-icons text-20 card-course__icon-favorite"><i class="fa-regular fa-heart"></i></a>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="rating flex">
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                                        </div>
+                                                        <small class="text-50">6 hours</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popoverContainer d-none">
+                                            <div class="media">
+                                                <div class="media-left mr-12pt">
+                                                    <img th:src="@{/img/paths/swift_40x40.png}"
+                                                         width="40"
+                                                         height="40"
+                                                         alt="Angular"
+                                                         class="rounded">
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="card-title mb-0">Build an iOS Application in Swift</div>
+                                                    <p class="lh-1 mb-0">
+                                                        <span class="text-50 small">with</span>
+                                                        <span class="text-50 small font-weight-bold">Elijah Murray</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <p class="my-16pt text-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                            <div class="mb-16pt">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-clock"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-circle-play"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-ranking-star"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col text-right">
+                                                    <a href="student-course.html"
+                                                       class="btn btn-primary">See Course</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+
+                                        <div class="card card-sm card--elevated p-relative o-hidden overlay overlay--primary-dodger-blue js-overlay mdk-reveal js-mdk-reveal "
+                                             data-partial-height="44"
+                                             data-toggle="popover"
+                                             data-trigger="click">
+
+                                            <a href="student-course.html"
+                                               class="js-image"
+                                               data-position="">
+                                                <img th:src="@{/img/paths/wordpress_430x168.png}"
+                                                     alt="course">
+                                                <span class="overlay__content align-items-start justify-content-start">
+                                                    <span class="overlay__action card-body d-flex align-items-center">
+                                                        <i class="material-icons mr-4pt"><i class="fa-solid fa-circle-play"></i></i>
+                                                        <span class="card-title text-white">Preview</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <div class="mdk-reveal__content">
+                                                <div class="card-body">
+                                                    <div class="d-flex">
+                                                        <div class="flex">
+                                                            <a class="card-title"
+                                                               href="student-course.html">Build a WordPress Website</a>
+                                                            <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                        </div>
+                                                        <a href="student-course.html"
+                                                           data-toggle="tooltip"
+                                                           data-title="Add Favorite"
+                                                           data-placement="top"
+                                                           data-boundary="window"
+                                                           class="ml-4pt material-icons text-20 card-course__icon-favorite"><i class="fa-regular fa-heart"></i></a>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="rating flex">
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                                        </div>
+                                                        <small class="text-50">6 hours</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popoverContainer d-none">
+                                            <div class="media">
+                                                <div class="media-left mr-12pt">
+                                                    <img th:src="@{/img/paths/wordpress_40x40.png}"
+                                                         width="40"
+                                                         height="40"
+                                                         alt="Angular"
+                                                         class="rounded">
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="card-title mb-0">Build a WordPress Website</div>
+                                                    <p class="lh-1 mb-0">
+                                                        <span class="text-50 small">with</span>
+                                                        <span class="text-50 small font-weight-bold">Elijah Murray</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <p class="my-16pt text-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                            <div class="mb-16pt">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt">check</span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-clock"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-circle-play"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-ranking-star"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col text-right">
+                                                    <a href="student-course.html"
+                                                       class="btn btn-primary">See Course</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+
+                                        <div class="card card-sm card--elevated p-relative o-hidden overlay overlay--primary-dodger-blue js-overlay mdk-reveal js-mdk-reveal "
+                                             data-partial-height="44"
+                                             data-toggle="popover"
+                                             data-trigger="click">
+
+                                            <a href="student-course.html"
+                                               class="js-image"
+                                               data-position="left">
+                                                <img th:src="@{/img/paths/react_430x168.png}"
+                                                     alt="course">
+                                                <span class="overlay__content align-items-start justify-content-start">
+                                                    <span class="overlay__action card-body d-flex align-items-center">
+                                                        <i class="material-icons mr-4pt"><i class="fa-solid fa-circle-play"></i></i>
+                                                        <span class="card-title text-white">Preview</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <div class="mdk-reveal__content">
+                                                <div class="card-body">
+                                                    <div class="d-flex">
+                                                        <div class="flex">
+                                                            <a class="card-title"
+                                                               href="student-course.html">Become a React Native Developer</a>
+                                                            <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                        </div>
+                                                        <a href="student-course.html"
+                                                           data-toggle="tooltip"
+                                                           data-title="Add Favorite"
+                                                           data-placement="top"
+                                                           data-boundary="window"
+                                                           class="ml-4pt material-icons text-20 card-course__icon-favorite"><i class="fa-regular fa-heart"></i></a>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="rating flex">
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                                        </div>
+                                                        <small class="text-50">6 hours</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popoverContainer d-none">
+                                            <div class="media">
+                                                <div class="media-left mr-12pt">
+                                                    <img th:src="@{/img/paths/react_40x40.png}"
+                                                         width="40"
+                                                         height="40"
+                                                         alt="Angular"
+                                                         class="rounded">
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="card-title mb-0">Become a React Native Developer</div>
+                                                    <p class="lh-1 mb-0">
+                                                        <span class="text-50 small">with</span>
+                                                        <span class="text-50 small font-weight-bold">Elijah Murray</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <p class="my-16pt text-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                            <div class="mb-16pt">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-clock"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-circle-play"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-ranking-star"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col text-right">
+                                                    <a href="student-course.html"
+                                                       class="btn btn-primary">See Course</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- // END Header Layout Content -->
+
+            <!-- Footer -->
+
+            <div class="bg-white border-top-2 mt-auto">
+                <div class="container page__container page-section d-flex flex-column">
+                    <p class="text-70 brand mb-24pt">
+                        <img class="brand-icon"
+                             th:src="@{/img/logo/black-70.png}"
+                             width="30"
+                             alt="Luma"> EasyLearn
+                    </p>
+                    <p class="measure-lead-max text-50 small mr-8pt">EasyLearn is a beautifully crafted user interface for modern Education Platforms, including Courses & Tutorials, Video Lessons, Student and Teacher Dashboard, Curriculum Management, Earnings and Reporting, ERP, HR, CMS, Tasks, Projects, eCommerce and more.</p>
+                    <p class="mb-8pt d-flex">
+                        <a href="#"
+                           class="text-70 text-underline mr-8pt small">Terms</a>
+                        <a href="#"
+                           class="text-70 text-underline small">Privacy policy</a>
+                    </p>
+                    <p class="text-50 small mt-n1 mb-0">Copyright 2023 &copy; All rights reserved.</p>
+                </div>
+            </div>
+
+            <!-- // END Footer -->
+
+        </div>
+        <!-- // END Header Layout -->
+
+        <!-- Drawer -->
+
+        <div class="mdk-drawer js-mdk-drawer"
+             id="default-drawer">
+            <div class="mdk-drawer__content">
+                <div class="sidebar sidebar-dark-pickled-bluewood sidebar-left"
+                     data-perfect-scrollbar>
+
+                    <!-- Sidebar Content -->
+
+                    <a href="index.html"
+                       class="sidebar-brand ">
+                        <!-- <img class="sidebar-brand-icon" src="../../public/images/illustration/student/128/white.svg" alt="Luma"> -->
+
+                        <span class="avatar avatar-xl sidebar-brand-icon h-auto">
+
+                            <span class="avatar-title rounded bg-primary"><img th:src="@{/img/illustration/achievement/128/white.png}"
+                                     class="img-fluid"
+                                     alt="logo" /></span>
+
+                        </span>
+
+                        <span>EasyLearn</span>
+                    </a>
+
+                    <div class="sidebar-heading">Student</div>
+                    <ul class="sidebar-menu">
+
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="index.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-house"></i></span>
+                                <span class="sidebar-menu-text">Home</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="courses.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <span class="sidebar-menu-text">Browse Courses</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="student-dashboard.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-chart-line"></i></span>
+                                <span class="sidebar-menu-text">Student Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="student-my-courses.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-book"></i></span>
+                                <span class="sidebar-menu-text">My Courses</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button"
+                               href="student-take-course.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-pen"></i></span>
+                                <span class="sidebar-menu-text">Take Course</span>
+                                <span class="sidebar-menu-badge badge badge-accent badge-notifications ml-auto">NEW</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="student-take-quiz.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-question"></i></span>
+                                <span class="sidebar-menu-text">Take Quiz</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="student-quiz-results.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-ranking-star"></i></span>
+                                <span class="sidebar-menu-text">My Quizzes</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="student-quiz-result-details.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-award"></i></span>
+                                <span class="sidebar-menu-text">Quiz Result</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               data-toggle="collapse"
+                               href="#account_menu">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-user"></i></span>
+                                Account
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent"
+                                id="account_menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="change-password.html">
+                                        <span class="sidebar-menu-text">Change Password</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="edit-account.html">
+                                        <span class="sidebar-menu-text">Edit Account</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="billing-history.html">
+                                        <span class="sidebar-menu-text">Payment History</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               data-toggle="collapse"
+                               href="#community_menu">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-user-group"></i></span>
+                                Community
+                                <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                            </a>
+                            <ul class="sidebar-submenu collapse sm-indent"
+                                id="community_menu">
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="student-profile.html">
+                                        <span class="sidebar-menu-text">Student Profile</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="blog.html">
+
+                                        <span class="sidebar-menu-text">Blog</span>
+                                    </a>
+                                </li>
+                                <li class="sidebar-menu-item">
+                                    <a class="sidebar-menu-button"
+                                       href="help-center.html">
+                                        <!--  -->
+                                        <span class="sidebar-menu-text">Help Center</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- // END Sidebar Content -->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- // END Drawer -->
+
+        <!-- jQuery -->
+        <script th:src="@{/vendor/jquery.min.js}"></script>
+
+        <!-- Bootstrap -->
+        <script th:src="@{/vendor/popper.min.js}"></script>
+        <script th:src="@{/vendor/bootstrap.min.js}"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script th:src="@{/vendor/perfect-scrollbar.min.js}"></script>
+
+        <!-- DOM Factory -->
+        <script th:src="@{/vendor/dom-factory.js}"></script>
+
+        <!-- MDK -->
+        <script th:src="@{/vendor/material-design-kit.js}"></script>
+
+        <!-- App JS -->
+        <script th:src="@{/js/app.js}"></script>
+
+        <!-- Preloader -->
+        <script th:src="@{/js/preloader.js}"></script>
+
+    </body>
+</html>

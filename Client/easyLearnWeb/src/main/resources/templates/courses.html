@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Courses</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots" content="noindex">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" th:href="@{/vendor/spinkit.css}" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" th:href="@{/vendor/perfect-scrollbar.css}" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" th:href="@{/css/material-icons.css}" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" th:href="@{/css/fontawesome.css}" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" th:href="@{/css/preloader.css}" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" th:href="@{/css/app.css}" rel="stylesheet">
+
+
+    <style type="text/css" id="operaUserStyle"></style></head>
+
+    <body class="layout-sticky-subnav layout-default ">
+
+        <div class="preloader">
+            <div class="sk-chase">
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+                <div class="sk-chase-dot"></div>
+            </div>
+
+            <!-- <div class="sk-bounce">
+    <div class="sk-bounce-dot"></div>
+    <div class="sk-bounce-dot"></div>
+  </div> -->
+
+            <!-- More spinner examples at https://github.com/tobiasahlin/SpinKit/blob/master/examples.html -->
+        </div>
+
+        <!-- Header Layout -->
+        <div class="mdk-header-layout js-mdk-header-layout">
+
+            <!-- Header -->
+
+            <div id="header"
+                 class="mdk-header js-mdk-header mb-0"
+                 data-fixed
+                 data-effects="">
+                <div class="mdk-header__content">
+
+                    <div class="navbar navbar-expand navbar-dark-pickled-bluewood navbar-shadow"
+                         id="default-navbar"
+                         data-primary>
+
+                        <!-- Navbar toggler -->
+                        <button class="navbar-toggler w-auto mr-16pt d-block rounded-0"
+                                type="button"
+                                data-toggle="sidebar">
+                            <span class="material-icons"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                        </button>
+
+                        <!-- Navbar Brand -->
+                        <a href="index.html"
+                           class="navbar-brand mr-16pt">
+                            <!-- <img class="navbar-brand-icon" src="../../public/images/logo/white-100@2x.png" width="30" alt="Luma"> -->
+
+                            <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+                                <span class="avatar-title rounded bg-primary"><img th:src="@{/img/illustration/achievement/128/white.png}"
+                                         alt="logo"
+                                         class="img-fluid" /></span>
+
+                            </span>
+
+                            <span class="d-none d-lg-block">EasyLearn</span>
+                        </a>
+
+                        <ul class="nav navbar-nav d-none d-sm-flex flex justify-content-start ml-8pt">
+                            <li class="nav-item">
+                                <a href="index.html"
+                                   class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown active">
+                                <a href="#"
+                                   class="nav-link dropdown-toggle"
+                                   data-toggle="dropdown"
+                                   data-caret="false">Courses</a>
+                                <div class="dropdown-menu">
+                                    <a href="courses.html"
+                                       class="dropdown-item active">Browse Courses</a>
+                                    <a href="student-take-course.html"
+                                       class="dropdown-item"><span class="mr-16pt">Take Course</span> <span class="badge badge-notifications badge-accent text-uppercase ml-auto">New</span></a>
+                                    <a href="student-take-quiz.html"
+                                       class="dropdown-item">Take Quiz</a>
+                                    <a href="student-quiz-result-details.html"
+                                       class="dropdown-item">Quiz Result</a>
+                                    <a href="student-dashboard.html"
+                                       class="dropdown-item">Student Dashboard</a>
+                                    <a href="student-my-courses.html"
+                                       class="dropdown-item">My Courses</a>
+                                    <a href="student-quiz-results.html"
+                                       class="dropdown-item">My Quizzes</a>
+                                    <a href="help-center.html"
+                                       class="dropdown-item">Help Center</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown"
+                                data-toggle="tooltip"
+                                data-title="Community"
+                                data-placement="bottom"
+                                data-boundary="window">
+                                <a href="#"
+                                   class="nav-link dropdown-toggle"
+                                   data-toggle="dropdown"
+                                   data-caret="false">
+                                    <i class="fa-solid fa-user-group"></i>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="student-profile.html"
+                                       class="dropdown-item">Student Profile</a>
+                                    <a href="blog.html"
+                                       class="dropdown-item">Blog</a>
+                                    <a href="help-center.html"
+                                       class="dropdown-item">Help Center</a>
+                                    <a href="discussions.html"
+                                       class="dropdown-item">Discussions</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <ul class="nav navbar-nav ml-auto mr-0">
+                            <li class="nav-item">
+                                <a href="login.html"
+                                   class="nav-link"
+                                   data-toggle="tooltip"
+                                   data-title="Login"
+                                   data-placement="bottom"
+                                   data-boundary="window"><i class="fa-solid fa-lock"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="signup.html"
+                                   class="btn btn-outline-white">Get Started</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- // END Header -->
+
+            <!-- Header Layout Content -->
+            <div class="mdk-header-layout__content page-content ">
+
+                <div data-push
+                     data-responsive-width="992px"
+                     class="mdk-drawer-layout js-mdk-drawer-layout">
+                    <div class="mdk-drawer-layout__content">
+
+                        <div class="page-section">
+                            <div class="container page__container">
+
+                                <div class="d-flex flex-column flex-sm-row align-items-sm-center mb-24pt"
+                                     style="white-space: nowrap;">
+                                    <small class="flex text-muted text-headings text-uppercase mr-3 mb-2 mb-sm-0">Displaying 4 out of 10 courses</small>
+                                    <div class="w-auto ml-sm-auto table d-flex align-items-center mb-2 mb-sm-0">
+                                        <small class="text-muted text-headings text-uppercase mr-3 d-none d-sm-block">Sort by</small>
+
+                                        <a href="#"
+                                           class="sort desc small text-headings text-uppercase">Newest</a>
+
+                                        <a href="#"
+                                           class="sort small text-headings text-uppercase ml-2">Popularity</a>
+
+                                    </div>
+
+                                    <a href="#"
+                                       data-target="#library-drawer"
+                                       data-toggle="sidebar"
+                                       class="btn btn-sm btn-white ml-sm-16pt">
+                                        <i class="material-icons icon--left"><i class="fa-solid fa-filter"></i></i> Filters
+                                    </a>
+
+                                </div>
+
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Registered Courses</div>
+                                </div>
+
+                                <div class="row card-group-row">
+
+                                    <div th:each="course : ${listCourse}" class="col-md-6 col-lg-4 col-xl-3 card-group-row__col">
+
+                                        <div  class="card card-sm card--elevated p-relative o-hidden overlay overlay--primary-dodger-blue js-overlay mdk-reveal js-mdk-reveal card-group-row__card"
+                                             data-overlay-onload-show
+                                             data-popover-onload-show
+                                             data-force-reveal
+                                             data-partial-height="44"
+                                             data-toggle="popover"
+                                             data-trigger="click">
+
+                                            <a href="student-course.html"
+                                               class="js-image"
+                                               data-position="">
+                                                <img th:src="@{/img/paths/mailchimp_430x168.png}"
+                                                     alt="course">
+                                                <span class="overlay__content align-items-start justify-content-start">
+                                                    <span class="overlay__action card-body d-flex align-items-center">
+                                                        <i class="fa-regular fa-circle-play fa-lg"></i>
+                                                        <span class="card-title text-white">Preview</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <div class="mdk-reveal__content">
+                                                <div class="card-body">
+                                                    <div class="d-flex">
+                                                        <div class="flex">
+                                                            <a class="card-title"
+                                                               href="student-course.html">Newsletter Design</a>
+                                                            <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                        </div>
+                                                        <a href="student-course.html"
+                                                           data-toggle="tooltip"
+                                                           data-title="Remove Favorite"
+                                                           data-placement="top"
+                                                           data-boundary="window"
+                                                           class="ml-4pt material-icons text-20 card-course__icon-favorite"><i class="fa-regular fa-heart"></i></a>
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <div class="rating flex">
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                            <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                                        </div>
+                                                        <small class="text-50">6 hours</small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popoverContainer d-none">
+                                            <div class="media">
+                                                <div class="media-left mr-12pt">
+                                                    <img th:src="@{/img/paths/mailchimp_40x40.png}"
+                                                         width="40"
+                                                         height="40"
+                                                         alt="Angular"
+                                                         class="rounded">
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="card-title mb-0">Newsletter Design</div>
+                                                    <p class="lh-1 mb-0">
+                                                        <span class="text-50 small">with</span>
+                                                        <span class="text-50 small font-weight-bold">Elijah Murray</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <p class="my-16pt text-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                            <div class="mb-16pt">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-regular fa-clock"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-regular fa-circle-play"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-ranking-star"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col text-right">
+                                                    <a th:href="@{'/student-course/registered/' + ${course.id}}"
+                                                       class="btn btn-primary">Continue</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="mb-32pt">
+
+                                    <ul class="pagination justify-content-start pagination-xsm m-0">
+                                        <li class="page-item disabled">
+                                            <a class="page-link"
+                                               href="#"
+                                               aria-label="Previous">
+                                                <span aria-hidden="true"
+                                                      class="material-icons"><i class="fa-solid fa-chevron-left"></i></span>
+                                                <span>Prev</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link"
+                                               href="#"
+                                               aria-label="Page 1">
+                                                <span>1</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link"
+                                               href="#"
+                                               aria-label="Page 2">
+                                                <span>2</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link"
+                                               href="#"
+                                               aria-label="Next">
+                                                <span>Next</span>
+                                                <span aria-hidden="true"
+                                                      class="material-icons"><i class="fa-solid fa-chevron-right"></i></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="page-separator">
+                                    <div class="page-separator__text">All Courses</div>
+                                </div>
+
+                                <div class="row card-group-row">
+
+                                    <div th:each="course : ${listCourse}" class="col-md-6 col-lg-4 col-xl-3 card-group-row__col">
+
+                                        <div class="card card-sm card--elevated p-relative o-hidden overlay overlay--primary-dodger-blue js-overlay card-group-row__card"
+                                             data-toggle="popover"
+                                             data-trigger="click">
+
+                                            <a href="student-course.html"
+                                               class="card-img-top js-image"
+                                               data-position=""
+                                               data-height="140">
+                                                <img th:src="@{/img/paths/angular_430x168.png}"
+                                                     alt="course">
+                                                <span class="overlay__content">
+                                                    <span class="overlay__action d-flex flex-column text-center">
+                                                        <i class="material-icons icon-32pt"><i class="fa-regular fa-circle-play"></i></i>
+                                                        <span class="card-title text-white">Preview</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <div class="card-body flex">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title"
+                                                           href="student-course.html">Learn Angular fundamentals</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="student-course.html"
+                                                       data-toggle="tooltip"
+                                                       data-title="Add Favorite"
+                                                       data-placement="top"
+                                                       data-boundary="window"
+                                                       class="ml-4pt material-icons text-20 card-course__icon-favorite"><i class="fa-regular fa-heart"></i></a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                        <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                        <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                        <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                        <span class="rating__item"><span class="material-icons"><i class="fa-regular fa-star"></i></span></span>
+                                                    </div>
+                                                    <!-- <small class="text-50">6 hours</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="row justify-content-between">
+                                                    <div class="col-auto d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-regular fa-clock"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                    </div>
+                                                    <div class="col-auto d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-regular fa-circle-play"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popoverContainer d-none">
+                                            <div class="media">
+                                                <div class="media-left mr-12pt">
+                                                    <img th:src="@{/img/paths/angular_40x40.png}"
+                                                         width="40"
+                                                         height="40"
+                                                         alt="Angular"
+                                                         class="rounded">
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="card-title mb-0">Learn Angular fundamentals</div>
+                                                    <p class="lh-1 mb-0">
+                                                        <span class="text-50 small">with</span>
+                                                        <span class="text-50 small font-weight-bold">Elijah Murray</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <p class="my-16pt text-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                            <div class="mb-16pt">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-regular fa-clock"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-regular fa-circle-play"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-chart-simple"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col text-right">
+                                                    <a th:href="@{'/student-course/' + ${course.id}}"
+                                                       class="btn btn-primary">See Course</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="mb-32pt">
+
+                                    <ul class="pagination justify-content-start pagination-xsm m-0">
+                                        <li class="page-item disabled">
+                                            <a class="page-link"
+                                               href="#"
+                                               aria-label="Previous">
+                                                <span aria-hidden="true"
+                                                      class="material-icons"><i class="fa-solid fa-chevron-left"></i></span>
+                                                <span>Prev</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link"
+                                               href="#"
+                                               aria-label="Page 1">
+                                                <span>1</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link"
+                                               href="#"
+                                               aria-label="Page 2">
+                                                <span>2</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a class="page-link"
+                                               href="#"
+                                               aria-label="Next">
+                                                <span>Next</span>
+                                                <span aria-hidden="true"
+                                                      class="material-icons"><i class="fa-solid fa-chevron-right"></i></span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="page-separator">
+                                    <div class="page-separator__text">Top Courses</div>
+                                </div>
+
+                                <div class="row card-group-row">
+
+                                    <div th:each="course : ${listCourse}" class="col-md-6 col-lg-4 col-xl-3 card-group-row__col">
+
+                                        <div class="card card-sm card--elevated p-relative o-hidden overlay overlay--primary-dodger-blue js-overlay card-group-row__card"
+                                             data-toggle="popover"
+                                             data-trigger="click">
+
+                                            <a href="student-course.html"
+                                               class="card-img-top js-image"
+                                               data-position=""
+                                               data-height="140">
+                                                <img th:src="@{/img/paths/sketch_430x168.png}"
+                                                     alt="course">
+                                                <span class="overlay__content">
+                                                    <span class="overlay__action d-flex flex-column text-center">
+                                                        <i class="material-icons icon-32pt"><i class="fa-regular fa-circle-play"></i></i>
+                                                        <span class="card-title text-white">Preview</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+
+                                            <div class="card-body flex">
+                                                <div class="d-flex">
+                                                    <div class="flex">
+                                                        <a class="card-title"
+                                                           href="student-course.html">Learn Sketch</a>
+                                                        <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                    </div>
+                                                    <a href="student-course.html"
+                                                       data-toggle="tooltip"
+                                                       data-title="Add Favorite"
+                                                       data-placement="top"
+                                                       data-boundary="window"
+                                                       class="ml-4pt material-icons text-20 card-course__icon-favorite"><i class="fa-regular fa-heart"></i></a>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="rating flex">
+                                                        <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                        <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                        <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                        <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                        <span class="rating__item"><span class="material-icons"><i class="fa-solid fa-star"></i></span></span>
+                                                    </div>
+                                                    <!-- <small class="text-50">6 hours</small> -->
+                                                </div>
+                                            </div>
+                                            <div class="card-footer">
+                                                <div class="row justify-content-between">
+                                                    <div class="col-auto d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-regular fa-clock"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                    </div>
+                                                    <div class="col-auto d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-regular fa-circle-play"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popoverContainer d-none">
+                                            <div class="media">
+                                                <div class="media-left mr-12pt">
+                                                    <img th:src="@{/img/paths/sketch_40x40.png}"
+                                                         width="40"
+                                                         height="40"
+                                                         alt="Angular"
+                                                         class="rounded">
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="card-title mb-0">Learn Sketch</div>
+                                                    <p class="lh-1 mb-0">
+                                                        <span class="text-50 small">with</span>
+                                                        <span class="text-50 small font-weight-bold">Elijah Murray</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                            <p class="my-16pt text-70">Learn the fundamentals of working with Angular and how to create basic applications.</p>
+
+                                            <div class="mb-16pt">
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Fundamentals of working with Angular</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Create complete Angular applications</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Working with the Angular CLI</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Understanding Dependency Injection</small></p>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="material-icons icon-16pt text-50 mr-8pt"><i class="fa-solid fa-check"></i></span>
+                                                    <p class="flex text-50 lh-1 mb-0"><small>Testing with Angular</small></p>
+                                                </div>
+                                            </div>
+
+                                            <div class="row align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-regular fa-clock"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>6 hours</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center mb-4pt">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-regular fa-circle-play"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <span class="material-icons icon-16pt text-50 mr-4pt"><i class="fa-solid fa-ranking-star"></i></span>
+                                                        <p class="flex text-50 lh-1 mb-0"><small>Beginner</small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col text-right">
+                                                    <a th:href="@{'/student-course/' + ${course.id}}"
+                                                       class="btn btn-primary">See Course</a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                                <ul class="pagination justify-content-start pagination-xsm m-0">
+                                    <li class="page-item disabled">
+                                        <a class="page-link"
+                                           href="#"
+                                           aria-label="Previous">
+                                            <span aria-hidden="true"
+                                                  class="material-icons"><i class="fa-solid fa-chevron-left"></i></span>
+                                            <span>Prev</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link"
+                                           href="#"
+                                           aria-label="Page 1">
+                                            <span>1</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link"
+                                           href="#"
+                                           aria-label="Page 2">
+                                            <span>2</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a class="page-link"
+                                           href="#"
+                                           aria-label="Next">
+                                            <span>Next</span>
+                                            <span aria-hidden="true"
+                                                  class="material-icons"><i class="fa-solid fa-chevron-right"></i></span>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="mdk-drawer js-mdk-drawer "
+                         id="library-drawer"
+                         data-align="end">
+                        <div class="mdk-drawer__content top-navbar">
+                            <div class="sidebar sidebar-light sidebar-right py-16pt"
+                                 data-perfect-scrollbar
+                                 data-perfect-scrollbar-wheel-propagation="true">
+
+                                <div class="d-flex align-items-center mb-24pt  d-lg-none">
+                                    <form action="#"
+                                          class="search-form search-form--light mx-16pt pr-0 pl-16pt">
+                                        <input type="text"
+                                               class="form-control pl-0"
+                                               placeholder="Search">
+                                        <button class="btn"
+                                                type="submit"><i class="material-icons">search</i></button>
+                                    </form>
+                                </div>
+
+
+                                <div class="sidebar-heading">Subscription</div>
+                                <div class="sidebar-block">
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input"
+                                                   type="checkbox"
+                                                   value=""
+                                                   id="filtersCheck07"
+                                                   checked="">
+                                            <label class="custom-control-label"
+                                                   for="filtersCheck07">All</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input"
+                                                   type="checkbox"
+                                                   value=""
+                                                   id="filtersCheck08">
+                                            <label class="custom-control-label"
+                                                   for="filtersCheck08">Beginner</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input"
+                                                   type="checkbox"
+                                                   value=""
+                                                   id="filtersCheck09">
+                                            <label class="custom-control-label"
+                                                   for="filtersCheck09">Intermediate</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input"
+                                                   type="checkbox"
+                                                   value=""
+                                                   id="filtersCheck10">
+                                            <label class="custom-control-label"
+                                                   for="filtersCheck10">Advanced</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- // END Header Layout Content -->
+
+        </div>
+        <!-- // END Header Layout -->
+
+        <!-- Drawer -->
+
+        <div class="mdk-drawer js-mdk-drawer"
+             id="default-drawer">
+            <div class="mdk-drawer__content">
+                <div class="sidebar sidebar-dark-pickled-bluewood sidebar-left"
+                     data-perfect-scrollbar>
+
+                    <!-- Sidebar Content -->
+
+                    <div class="d-flex align-items-center navbar-height">
+                        <form action="#"
+                              class="search-form search-form--black mx-16pt pr-0 pl-16pt">
+                            <input type="text"
+                                   class="form-control pl-0"
+                                   placeholder="Search">
+                            <button class="btn"
+                                    type="submit"><i class="material-icons"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+                        </form>
+                    </div>
+
+                    <a href="index.html"
+                       class="sidebar-brand ">
+                        <!-- <img class="sidebar-brand-icon" src="../../public/images/illustration/student/128/white.svg" alt="Luma"> -->
+
+                        <span class="avatar avatar-xl sidebar-brand-icon h-auto">
+
+                            <span class="avatar-title rounded bg-primary"><img th:src="@{/img/illustration/achievement/128/white.png}"
+                                     class="img-fluid"
+                                     alt="logo" /></span>
+
+                        </span>
+
+                        <span>EasyLearn</span>
+                    </a>
+
+                    <div class="sidebar-heading">Student</div>
+                    <ul class="sidebar-menu">
+
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="index.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-house"></i></span>
+                                <span class="sidebar-menu-text">Home</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item active">
+                            <a class="sidebar-menu-button"
+                               href="courses.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <span class="sidebar-menu-text">Browse Courses</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="student-dashboard.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-user"></i></span>
+                                <span class="sidebar-menu-text">Student Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="student-my-courses.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-book"></i></span>
+                                <span class="sidebar-menu-text">My Courses</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="student-take-course.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-pen"></i></span>
+                                <span class="sidebar-menu-text">Take Course</span>
+                                <span class="sidebar-menu-badge badge badge-accent badge-notifications ml-auto">NEW</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="student-take-quiz.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-question"></i></span>
+                                <span class="sidebar-menu-text">Take Quiz</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="student-quiz-results.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-book-open"></i></span>
+                                <span class="sidebar-menu-text">My Quizzes</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="student-quiz-result-details.html">
+                                <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-award"></i></span>
+                                <span class="sidebar-menu-text">Quiz Result</span>
+                            </a>
+                        </li>
+
+                            </ul>
+                        </li>
+
+                            </ul>
+                        </li>
+
+                    <!-- // END Sidebar Content -->
+
+                </div>
+            </div>
+        </div>
+
+        <!-- // END Drawer -->
+
+        <!-- jQuery -->
+        <script th:src="@{/vendor/jquery.min.js}"></script>
+
+        <!-- Bootstrap -->
+        <script th:src="@{/vendor/popper.min.js}"></script>
+        <script th:src="@{/vendor/bootstrap.min.js}"></script>
+
+        <!-- Perfect Scrollbar -->
+        <script th:src="@{/vendor/perfect-scrollbar.min.js}"></script>
+
+        <!-- DOM Factory -->
+        <script th:src="@{/vendor/dom-factory.js}"></script>
+
+        <!-- MDK -->
+        <script th:src="@{/vendor/material-design-kit.js}"></script>
+
+        <!-- App JS -->
+        <script th:src="@{/js/app.js}"></script>
+
+        <!-- Preloader -->
+        <script th:src="@{/js/preloader.js}"></script>
+
+    </body>
+</html>

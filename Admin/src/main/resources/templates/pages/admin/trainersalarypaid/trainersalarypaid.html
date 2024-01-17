@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="pages/fragment/head :: head"></div>
+
+<body id="page-top">
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div th:replace="pages/fragment/sidebar :: sidebar"></div>
+
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <div th:replace="pages/fragment/topbar_after_login :: topbar"></div>
+            <!-- End of Topbar -->
+
+            <!-- Navbar -->
+            <div th:replace="pages/admin/admin_fragment/navbar/finance_trainer :: navbar"></div>
+            <!-- End Navbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid pt-2">
+
+
+                <!-- table notification admin -->
+                <div class="column mx-0 px-0 ">
+
+
+                    <!-- Title page content -->
+                    <div th:replace="pages/admin/admin_fragment/titlePageContent/finance_trainer :: titlePageContentTable"></div>
+                    <!-- end Title page content-->
+
+
+                    <!-- Table -->
+                    <div class="container mt-3">
+                        <!-- Trainer Salary Table -->
+                        <input type="text" id="searchInput" placeholder="Search...">
+
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Payment Date</th>
+                                <th>Amount</th>
+                                <th>Description</th>
+                                <th>Credit/Debit</th>
+                                <th>Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="salary : ${trainerSalaries}">
+                                <td th:text="${salary.id}"></td>
+                                <td th:text="${salary.trainerFirstName}"></td>
+                                <td th:text="${salary.trainerLastName}"></td>
+                                <td th:text="${#dates.format(salary.paymentDate, 'yyyy-MM-dd')}"></td>
+                                <td th:text="${#numbers.formatDecimal(salary.amount, 0, 'COMMA', 0, 'POINT')} + ' đ'"></td>
+                                <td th:text="${salary.description}"></td>
+                                <td th:text="${salary.creditDebit}"></td>
+                                <td>
+                                    <!-- Edit Button -->
+                                    <!-- Add onclick event to the Edit button -->
+                                    <a type="button" class="btn btn-primary"
+                                       th:onclick="'editSalary(' + ${salary.id} + ')'">Edit</a>
+
+                                    <!-- Delete Button -->
+                                    <!--             <a type="button" class="btn btn-danger btn-sm" th:attr="data-salary-id=${salary.id}" onclick="showDeleteAlert(this.getAttribute('data-salary-id'))">Delete</a>-->
+                                    <a type="button" class="btn btn-danger" th:attr="data-salary-id=${salary.id}"
+                                       onclick="confirmDelete(this.getAttribute('data-salary-id'))">Delete</a>
+
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div id="pagination" class="mt-2">
+                            <!-- Nút phân trang sẽ được thêm vào đây -->
+                        </div>
+
+                    </div>
+
+                    <!-- Trainer Salary Modal (for Create and Edit) -->
+                    <div class="modal" id="trainerSalaryModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Trainer Salary Details</h4>
+                                    <button type="button" class="close" onclick="resetForm()" data-dismiss="modal">
+                                        &times;
+                                    </button>
+                                </div>
+
+                                <!-- ... [previous code] ... -->
+
+                                <div class="modal-body">
+                                    <form id="trainerSalaryForm" th:action="@{/trainer-salary/save}" th:method="post"
+                                          th:object="${trainerSalary}">
+                                        <input type="hidden" id="salaryId" th:field="*{id}"/>
+
+                                        <div class="form-group">
+                                            <label for="trainerId" id="labeltrainerId">Trainer</label>
+                                            <select class="form-control" id="trainerId" th:field="*{trainerId}"
+                                                    onchange="updateTrainerInfo()">
+                                                <option value="">Choose...</option>
+                                                <th:block th:each="trainer : ${trainers}">
+                                                    <option th:value="${trainer.id}"
+                                                            th:data-firstname="${trainer.firstname}"
+                                                            th:data-lastname="${trainer.lastname}"
+                                                            th:text="${trainer.firstname}"></option>
+                                                </th:block>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="trainerFirstName">First Name</label>
+                                            <input type="text" class="form-control" id="trainerFirstName"
+                                                   th:field="*{trainerFirstName}" placeholder="First Name" readonly/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="trainerFirstName">Last Name</label>
+                                            <input type="text" class="form-control" id="trainerLastName"
+                                                   th:field="*{trainerLastName}" placeholder="Last Name" readonly/>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="paymentDate">Payment Date</label>
+                                            <input type="date" id="paymentDate" class="form-control"
+                                                   th:field="*{paymentDate}" required/>
+                                            <div th:if="${#fields.hasErrors('paymentDate')}" th:errors="*{paymentDate}"
+                                                 class="invalid-feedback"></div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="amount">Amount</label>
+                                            <div class="input-container">
+                                                <input type="text" id="amount" class="form-control" required/>
+                                                <span class="currency">VNĐ</span>
+                                            </div>
+                                            <input type="hidden" id="amountNumeric" name="amount" />
+
+                                            <div th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}"
+                                                 class="invalid-feedback"></div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="description">Description</label>
+                                            <input type="text" id="description" class="form-control"
+                                                   th:field="*{description}" required/>
+                                            <div th:if="${#fields.hasErrors('description')}" th:errors="*{description}"
+                                                 class="invalid-feedback"></div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="creditDebit">Credit/Debit</label>
+                                            <input type="number" id="creditDebit" class="form-control"
+                                                   th:field="*{creditDebit}" required/>
+                                            <div th:if="${#fields.hasErrors('creditDebit')}" th:errors="*{creditDebit}"
+                                                 class="invalid-feedback"></div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!-- ... [rest of the code] ... -->
+
+
+                                <div class="modal-footer">
+                                    <button type="submit" id="saveButton" form="trainerSalaryForm"
+                                            class="btn btn-primary">Save
+                                    </button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal"
+                                            onclick="resetForm()">Close
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Table -->
+
+                    <!--end of table notification admin -->
+
+                </div>
+                <!--end of table notification admin -->
+
+                <!-- Footer -->
+                <div th:replace="pages/fragment/footer :: footer"></div>
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div th:replace="pages/fragment/modal_logout :: modal_logout"></div>
+
+        <!-- Bootstrap core JavaScript-->
+        <div th:replace="pages/fragment/script :: script"></div>
+</body>
+</html>

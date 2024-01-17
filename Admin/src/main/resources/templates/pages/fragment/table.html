@@ -1,0 +1,45 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div class="card shadow mb-4" th:fragment="table">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+            Table admin
+        </h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table
+                    class="table table-bordered"
+                    id="dataTable"
+                    width="100%"
+                    cellspacing="0"
+            >
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>User</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                    <th>Detail</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td>
+                        <a th:href="@{/admin/profile-other}">
+
+                        </a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

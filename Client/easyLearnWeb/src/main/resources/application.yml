@@ -1,0 +1,13 @@
+server:
+  port: 9092
+
+spring:
+  profiles:
+    active: dev
+
+stripe:
+  publicKey: pk_test_51OUpGxGlvWLQzwAXdbl7Wzs25yoZnPkSEBRiF3AOzQdZZe8renAIM4RqC8t5y3AcAH18wVilGv68kzFGcre88aBC00YGKWynjA
+  secretKey: sk_test_51OUpGxGlvWLQzwAXXkT8fwElK43tCm86mjB9F8iS2pzYdyHA5vIcDFvMjZs1gyqzFOGiNqsdN2zmAgbH0xQ4bqgB005Npk7XCh
+
+main:
+  banner-mode: off

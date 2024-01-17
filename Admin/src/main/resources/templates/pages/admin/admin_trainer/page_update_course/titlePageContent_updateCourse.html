@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<div th:fragment="titlePageContent" class="card table px-5 py-5">
+    <div class="row d-flex justify-content-center px-2 py-4 mx-0">
+        <div class="col-xl-9 col-lg-12 ">
+            <div class="card my-0">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img th:src="@{'/getImg/'+${courseUpdate.img}}" class="custom-img rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="table card-body py-3 my-0">
+                            <h3 th:text="${courseUpdate.title}" class="card-title"></h3>
+                            <p th:text="${courseUpdate.description}" class="card-text"></p>
+                            <p class="card-text">
+                                <small th:text="${courseUpdate.lastUpdate}" class="text-body-secondary"></small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

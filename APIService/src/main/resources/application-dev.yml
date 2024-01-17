@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+#        show_sql: true
+        format_sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/easylearn?createDatabaseIfNotExist=true
+    username: root
+    password:
+
+  mvc:
+    format:
+      date: yyyy-MM-dd
+

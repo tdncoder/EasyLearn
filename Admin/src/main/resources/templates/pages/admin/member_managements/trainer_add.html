@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<div th:replace="pages/fragment/head_after_login :: head"></div>
+
+<body id="page-top">
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    <div th:replace="pages/fragment/sidebar_after_login :: sidebar"></div>
+
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            <div th:replace="pages/fragment/topbar_after_login :: topbar"></div>
+            <!-- End of Topbar -->
+
+            <!-- Navbar -->
+            <div th:replace="pages/admin/member_managements/admin_member_trainer_add :: navbar"></div>
+            <!-- End Navbar -->
+
+            <!-- Begin Page Content -->
+            <div class="container-fluid pt-2">
+
+
+                <!-- table notification admin -->
+                <div class="column mx-0 px-0 ">
+
+
+                    <!-- Title page content -->
+                    <div th:replace="pages/admin/member_managements/admin_member_trainer_title.html :: titlePageContentTable"></div>
+                    <!-- end Title page content-->
+
+                    <!-- Table -->
+                    <div th:replace="pages/admin/member_managements/member_trainer_table_add"></div>
+                    <!-- END Table -->
+
+                    <!--end of table notification admin -->
+
+                </div>
+                <!--end of table notification admin -->
+
+                <!-- Footer -->
+                <div th:replace="pages/fragment/footer_after_login :: footer"></div>
+                <!-- End of Footer -->
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div th:replace="pages/fragment/modal_logout_after_login :: modal_logout"></div>
+
+        <!-- Bootstrap core JavaScript-->
+        <div th:replace="pages/fragment/script :: script"></div>
+    </div>
+</div>
+</body>
+</html>

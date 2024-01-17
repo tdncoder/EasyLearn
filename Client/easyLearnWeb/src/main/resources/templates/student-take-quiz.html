@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr" xmlns:th="http://www.thymeleaf.org">
+
+
+<!-- Mirrored from luma.humatheme.com/Demos/Fixed_Layout/student-take-lesson.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Dec 2023 14:39:21 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lesson</title>
+
+    <!-- Prevent the demo from appearing in search engines -->
+    <meta name="robots"
+          content="noindex">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700%7CRoboto:400,500%7CExo+2:600&amp;display=swap"
+          rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" th:href="@{/vendor/spinkit.css}" rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css" th:href="@{/vendor/perfect-scrollbar.css}" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css" th:href="@{/css/material-icons.css}" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css" th:href="@{/css/fontawesome.css}" rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css" th:href="@{/css/preloader.css}" rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css" th:href="@{/css/app.css}" rel="stylesheet">
+
+</head>
+
+<body class="layout-sticky-subnav layout-default ">
+
+<div class="preloader">
+    <div class="sk-chase">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+    </div>
+
+    <!-- <div class="sk-bounce">
+<div class="sk-bounce-dot"></div>
+<div class="sk-bounce-dot"></div>
+</div> -->
+
+    <!-- More spinner examples at https://github.com/tobiasahlin/SpinKit/blob/master/examples.html -->
+</div>
+
+<!-- Header Layout -->
+<div class="mdk-header-layout js-mdk-header-layout">
+
+    <!-- Header -->
+
+    <div id="header"
+         class="mdk-header js-mdk-header mb-0"
+         data-fixed
+         data-effects="">
+        <div class="mdk-header__content">
+
+            <!-- Navbar -->
+
+            <div class="navbar navbar-expand pr-0 navbar-dark-pickled-bluewood navbar-shadow"
+                 id="default-navbar"
+                 data-primary>
+
+                <!-- Navbar Toggler -->
+
+                <button class="navbar-toggler w-auto mr-16pt d-block rounded-0"
+                        type="button"
+                        data-toggle="sidebar">
+                    <span class="material-icons"><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                </button>
+
+                <!-- // END Navbar Toggler -->
+
+                <!-- Navbar Brand -->
+
+                <a href="index.html"
+                   class="navbar-brand mr-16pt">
+
+                            <span class="avatar avatar-sm navbar-brand-icon mr-0 mr-lg-8pt">
+
+                                <span class="avatar-title rounded bg-primary"><img src="https://luma.humatheme.com/public/images/illustration/student/128/white.svg"
+                                                                                   alt="logo"
+                                                                                   class="img-fluid" /></span>
+
+                            </span>
+
+                    <span class="d-none d-lg-block">EasyLearn</span>
+                </a>
+
+                <!-- // END Navbar Brand -->
+
+                <span class="d-none d-md-flex align-items-center mr-16pt">
+
+                            <span class="avatar avatar-sm mr-12pt">
+
+                                <span class="avatar-title rounded navbar-avatar"><i class="material-icons"><i class="fa-solid fa-trophy"></i></i></span>
+
+                            </span>
+
+                            <small class="flex d-flex flex-column">
+                                <strong class="navbar-text-100">Experience IQ</strong>
+                                <span class="navbar-text-50">2,300 points</span>
+                            </small>
+                        </span>
+
+                <!-- Navbar Search -->
+
+                <form class="search-form navbar-search d-none d-md-flex mr-16pt"
+                      action="https://luma.humatheme.com/Demos/Fixed_Layout/index.html">
+                    <button class="btn"
+                            type="submit"><i class="material-icons"><i class="fa-solid fa-magnifying-glass"></i></i></button>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Search ...">
+                </form>
+
+                <!-- // END Navbar Search -->
+
+                <div class="flex"></div>
+
+                <!-- Navbar Menu -->
+
+                <div class="nav navbar-nav flex-nowrap d-flex mr-16pt">
+
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item dropdown dropdown-notifications dropdown-xs-down-full"
+                         data-toggle="tooltip"
+                         data-title="Messages"
+                         data-placement="bottom"
+                         data-boundary="window">
+                        <button class="nav-link btn-flush dropdown-toggle"
+                                type="button"
+                                data-toggle="dropdown"
+                                data-caret="false">
+                            <i class="material-icons icon-24pt"><i class="fa-solid fa-comment"></i></i>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar
+                                 class="position-relative">
+                                <div class="dropdown-header"><strong>Messages</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action unread">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">5 minutes ago</small>
+
+                                                    <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                                </span>
+                                        <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <img th:src="@{/img/people/110/woman-5.jpg}"
+                                                             alt="people"
+                                                             class="avatar-img rounded-circle">
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="text-black-100">Michelle</strong>
+                                                        <span class="text-black-70">Clients loved the new design.</span>
+                                                    </span>
+                                                </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">5 minutes ago</small>
+
+                                                </span>
+                                        <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <img th:src="@{/img/people/110/woman-5.jpg}"
+                                                             alt="people"
+                                                             class="avatar-img rounded-circle">
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="text-black-100">Michelle</strong>
+                                                        <span class="text-black-70">🔥 Superb job..</span>
+                                                    </span>
+                                                </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+
+                    <!-- Notifications dropdown -->
+                    <div class="nav-item ml-16pt dropdown dropdown-notifications dropdown-xs-down-full"
+                         data-toggle="tooltip"
+                         data-title="Notifications"
+                         data-placement="bottom"
+                         data-boundary="window">
+                        <button class="nav-link btn-flush dropdown-toggle"
+                                type="button"
+                                data-toggle="dropdown"
+                                data-caret="false">
+                            <i class="material-icons"><i class="fa-solid fa-bell"></i></i>
+                            <span class="badge badge-notifications badge-accent">2</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div data-perfect-scrollbar
+                                 class="position-relative">
+                                <div class="dropdown-header"><strong>System notifications</strong></div>
+                                <div class="list-group list-group-flush mb-0">
+
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action unread">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">3 minutes ago</small>
+
+                                                    <span class="ml-auto unread-indicator bg-accent"></span>
+
+                                                </span>
+                                        <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <span class="avatar-title rounded-circle bg-light">
+                                                            <i class="material-icons font-size-16pt text-accent"><i class="fa-solid fa-circle-user"></i></i>
+                                                        </span>
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+
+                                                        <span class="text-black-70">Your profile information has not been synced correctly.</span>
+                                                    </span>
+                                                </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">5 hours ago</small>
+
+                                                </span>
+                                        <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <span class="avatar-title rounded-circle bg-light">
+                                                            <i class="material-icons font-size-16pt text-primary"><i class="fa-solid fa-user-plus"></i></i>
+                                                        </span>
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+                                                        <strong class="text-black-100">Adrian. D</strong>
+                                                        <span class="text-black-70">Wants to join your private group.</span>
+                                                    </span>
+                                                </span>
+                                    </a>
+
+                                    <a href="javascript:void(0);"
+                                       class="list-group-item list-group-item-action">
+                                                <span class="d-flex align-items-center mb-1">
+                                                    <small class="text-black-50">1 day ago</small>
+
+                                                </span>
+                                        <span class="d-flex">
+                                                    <span class="avatar avatar-xs mr-2">
+                                                        <span class="avatar-title rounded-circle bg-light">
+                                                            <i class="material-icons font-size-16pt text-warning"><i class="fa-solid fa-database"></i></i>
+                                                        </span>
+                                                    </span>
+                                                    <span class="flex d-flex flex-column">
+
+                                                        <span class="text-black-70">Your deploy was successful.</span>
+                                                    </span>
+                                                </span>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // END Notifications dropdown -->
+
+                    <div class="nav-item dropdown">
+                        <a href="#"
+                           class="nav-link d-flex align-items-center dropdown-toggle"
+                           data-toggle="dropdown"
+                           data-caret="false">
+
+                                    <span class="avatar avatar-sm mr-8pt2">
+
+                                        <span class="avatar-title rounded-circle bg-primary"><i class="material-icons"><i class="fa-solid fa-user"></i></i></span>
+
+                                    </span>
+
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-header"><strong>Account</strong></div>
+                            <a class="dropdown-item"
+                               href="edit-account.html">Edit Account</a>
+                            <a class="dropdown-item"
+                               href="billing.html">Billing</a>
+                            <a class="dropdown-item"
+                               href="billing-history.html">Payments</a>
+                            <a class="dropdown-item"
+                               href="login.html">Logout</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- // END Navbar Menu -->
+
+            </div>
+
+            <!-- // END Navbar -->
+
+        </div>
+    </div>
+
+    <!-- // END Header -->
+
+    <!-- Header Layout Content -->
+    <div class="mdk-header-layout__content page-content ">
+
+
+        <div class="bg-primary pb-lg-64pt py-32pt">
+            <div class="container page__container">
+            <!--QUIZ FORM-->
+                <form th:action="@{/quiz/submit}" method="post" th:object="${quiz}">
+                    <div class="question" th:each="ques, i: ${quiz.questions}">
+                        <p th:text="${ques.question}">What is the capital of France ?</p>
+
+                        <div class="form-check">
+                            <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    th:name="|questions[${i.index}].chose|"
+                                    th:value="${ques.op1}"
+                            />
+                            <label class="form-check-label" th:text="${ques.op1}">
+                                b. London
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    th:name="|questions[${i.index}].chose|"
+                                    th:value="${ques.op2}"
+                            />
+                            <label class="form-check-label" th:text="${ques.op2}">
+                                b. London
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    th:name="|questions[${i.index}].chose|"
+                                    th:value="${ques.op3}"
+                            />
+                            <label class="form-check-label" th:text="${ques.op3}">
+                                c. Berlin
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    th:name="|questions[${i.index}].chose|"
+                                    th:value="${ques.op4}"
+                            />
+                            <label class="form-check-label" th:text="${ques.op4}">
+                                c. Berlin
+                            </label>
+                        </div>
+
+                        <input type="hidden" th:name = "|questions[${i.index}].id|" th:value="${ques.id}">
+                        <input type="hidden" th:name = "|questions[${i.index}].rightAnswer|" th:value="${ques.rightAnswer}">
+                        <input type="hidden" th:name = "|questions[${i.index}].question|" th:value="${ques.question}">
+                        <input type="hidden" th:name = "|questions[${i.index}].lessonEditId|" th:value="${ques.lessonEditId}">
+
+                    </div>
+                    <button type="submit" class="btn btn-danger d-block mx-auto mt-4">Submit Answer</button>
+                </form>
+            </div>
+        </div>
+        <div class="navbar navbar-expand-sm navbar-light bg-white border-bottom-2 navbar-list p-0 m-0 align-items-center">
+            <div class="container page__container">
+                <ul class="nav navbar-nav flex align-items-sm-center">
+                    <li class="nav-item navbar-list__item">
+                        <div class="media align-items-center">
+                                    <span class="media-left mr-16pt">
+                                        <img th:src="@{/img/people/50/guy-6.jpg}"
+                                             width="40"
+                                             alt="avatar"
+                                             class="rounded-circle">
+                                    </span>
+                            <div class="media-body">
+                                <a class="card-title m-0"
+                                   href="teacher-profile.html">Eddie Bryan</a>
+                                <p class="text-50 lh-1 mb-0">Instructor</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item navbar-list__item">
+                        <i class="material-icons text-muted icon--left"><i class="fa-solid fa-clock"></i></i>
+                        2h 46m
+                    </li>
+                    <li class="nav-item navbar-list__item">
+                        <i class="material-icons text-muted icon--left"><i class="fa-solid fa-ranking-star"></i></i>
+                        Beginner
+                    </li>
+                    <li class="nav-item ml-sm-auto text-sm-center flex-column navbar-list__item">
+                        <div class="rating rating-24">
+                            <div class="rating__item"><i class="material-icons"><i class="fa-solid fa-star"></i></i></div>
+                            <div class="rating__item"><i class="material-icons"><i class="fa-solid fa-star"></i></i></div>
+                            <div class="rating__item"><i class="material-icons"><i class="fa-solid fa-star"></i></i></div>
+                            <div class="rating__item"><i class="material-icons"><i class="fa-solid fa-star"></i></i></div>
+                            <div class="rating__item"><i class="material-icons"><i class="fa-regular fa-star"></i></i></div>
+                        </div>
+                        <p class="lh-1 mb-0"><small class="text-muted">20 ratings</small></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="page-section">
+            <div class="container page__container">
+
+                <div class="d-flex align-items-center mb-heading">
+                    <h4 class="m-0">Discussions</h4>
+                    <a href="discussions-ask.html"
+                       class="text-underline ml-auto">Ask a Question</a>
+                </div>
+
+                <div class="border-top">
+
+                    <div class="list-group list-group-flush">
+
+                        <div class="list-group-item p-3">
+                            <div class="row align-items-start">
+                                <div class="col-md-3 mb-8pt mb-md-0">
+                                    <div class="media align-items-center">
+                                        <div class="media-left mr-12pt">
+                                            <a href="#"
+                                               class="avatar avatar-sm">
+                                                <!-- <img src="../../LB" alt="avatar" class="avatar-img rounded-circle"> -->
+                                                <span class="avatar-title rounded-circle">LB</span>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex flex-column media-body media-middle">
+                                            <a href="#"
+                                               class="card-title">Laza Bogdan</a>
+                                            <small class="text-muted">2 days ago</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-8pt mb-md-0">
+                                    <p class="mb-8pt"><a href="discussion.html"
+                                                         class="text-body"><strong>Using Angular HttpClientModule instead of HttpModule</strong></a></p>
+
+                                    <a href="discussion.html"
+                                       class="chip chip-outline-secondary">Angular fundamentals</a>
+
+                                </div>
+                                <div class="col-auto d-flex flex-column align-items-center justify-content-center">
+                                    <h5 class="m-0">1</h5>
+                                    <p class="lh-1 mb-0"><small class="text-70">answers</small></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="list-group-item p-3">
+                            <div class="row align-items-start">
+                                <div class="col-md-3 mb-8pt mb-md-0">
+                                    <div class="media align-items-center">
+                                        <div class="media-left mr-12pt">
+                                            <a href="#"
+                                               class="avatar avatar-sm">
+                                                <!-- <img src="../../AC" alt="avatar" class="avatar-img rounded-circle"> -->
+                                                <span class="avatar-title rounded-circle">AC</span>
+                                            </a>
+                                        </div>
+                                        <div class="d-flex flex-column media-body media-middle">
+                                            <a href="#"
+                                               class="card-title">Adam Curtis</a>
+                                            <small class="text-muted">3 days ago</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col mb-8pt mb-md-0">
+                                    <p class="mb-0"><a href="discussion.html"
+                                                       class="text-body"><strong>Why am I getting an error when trying to install angular/http@2.4.2</strong></a></p>
+
+                                </div>
+                                <div class="col-auto d-flex flex-column align-items-center justify-content-center">
+                                    <h5 class="m-0">1</h5>
+                                    <p class="lh-1 mb-0"><small class="text-70">answers</small></p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a href="discussions.html"
+                   class="btn btn-outline-secondary">See all discussions for this lesson</a>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- // END Header Layout Content -->
+
+    <!-- Footer -->
+
+    <div class="bg-white border-top-2 mt-auto">
+        <div class="container page__container page-section d-flex flex-column">
+            <p class="text-70 brand mb-24pt">
+                <img class="brand-icon"
+                     th:src="@{/img/logo/black-70.png}"
+                     width="30"
+                     alt="Luma"> EasyLearn
+            </p>
+            <p class="measure-lead-max text-50 small mr-8pt">EasyLearn is a beautifully crafted user interface for modern Education Platforms, including Courses & Tutorials, Video Lessons, Student and Teacher Dashboard, Curriculum Management, Earnings and Reporting, ERP, HR, CMS, Tasks, Projects, eCommerce and more.</p>
+            <p class="mb-8pt d-flex">
+                <a href="#"
+                   class="text-70 text-underline mr-8pt small">Terms</a>
+                <a href="#"
+                   class="text-70 text-underline small">Privacy policy</a>
+            </p>
+            <p class="text-50 small mt-n1 mb-0">Copyright 2023 &copy; All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- // END Footer -->
+
+</div>
+<!-- // END Header Layout -->
+
+<!-- Drawer -->
+
+<div class="mdk-drawer js-mdk-drawer"
+     id="default-drawer">
+    <div class="mdk-drawer__content">
+        <div class="sidebar sidebar-dark-pickled-bluewood sidebar-left"
+             data-perfect-scrollbar>
+
+            <!-- Sidebar Content -->
+
+            <a href="index.html"
+               class="sidebar-brand ">
+                <!-- <img class="sidebar-brand-icon" src="../../public/images/illustration/student/128/white.svg" alt="Luma"> -->
+
+                <span class="avatar avatar-xl sidebar-brand-icon h-auto">
+
+                            <span class="avatar-title rounded bg-primary"><img th:src="@{/img/illustration/achievement/128/white.png}"
+                                                                               class="img-fluid"
+                                                                               alt="logo" /></span>
+
+                        </span>
+
+                <span>EasyLearn</span>
+            </a>
+
+            <div class="sidebar-heading">Student</div>
+            <ul class="sidebar-menu">
+
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button"
+                       href="index.html">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-house"></i></span>
+                        <span class="sidebar-menu-text">Home</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button"
+                       href="courses.html">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <span class="sidebar-menu-text">Browse Courses</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button"
+                       href="student-dashboard.html">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-chart-line"></i></span>
+                        <span class="sidebar-menu-text">Student Dashboard</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button"
+                       href="student-my-courses.html">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-book"></i></span>
+                        <span class="sidebar-menu-text">My Courses</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button"
+                       href="student-take-course.html">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-pen"></i></span>
+                        <span class="sidebar-menu-text">Take Course</span>
+                        <span class="sidebar-menu-badge badge badge-accent badge-notifications ml-auto">NEW</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button"
+                       href="student-take-quiz.html">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-question"></i></span>
+                        <span class="sidebar-menu-text">Take Quiz</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button"
+                       href="student-quiz-results.html">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-ranking-star"></i></span>
+                        <span class="sidebar-menu-text">My Quizzes</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button"
+                       href="student-quiz-result-details.html">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-award"></i></span>
+                        <span class="sidebar-menu-text">Quiz Result</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button"
+                       data-toggle="collapse"
+                       href="#account_menu">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-user"></i></span>
+                        Account
+                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                    </a>
+                    <ul class="sidebar-submenu collapse sm-indent"
+                        id="account_menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="change-password.html">
+                                <span class="sidebar-menu-text">Change Password</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="edit-account.html">
+                                <span class="sidebar-menu-text">Edit Account</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="billing-history.html">
+                                <span class="sidebar-menu-text">Payment History</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-button"
+                       data-toggle="collapse"
+                       href="#community_menu">
+                        <span class="material-icons sidebar-menu-icon sidebar-menu-icon--left"><i class="fa-solid fa-user-group"></i></span>
+                        Community
+                        <span class="ml-auto sidebar-menu-toggle-icon"></span>
+                    </a>
+                    <ul class="sidebar-submenu collapse sm-indent"
+                        id="community_menu">
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="student-profile.html">
+
+                                <span class="sidebar-menu-text">Student Profile</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="blog.html">
+
+                                <span class="sidebar-menu-text">Blog</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-menu-item">
+                            <a class="sidebar-menu-button"
+                               href="help-center.html">
+                                <!--  -->
+                                <span class="sidebar-menu-text">Help Center</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- // END Sidebar Content -->
+
+        </div>
+    </div>
+</div>
+
+<!-- // END Drawer -->
+
+<!-- jQuery -->
+<script th:src="@{/vendor/jquery.min.js}"></script>
+
+<!-- Bootstrap -->
+<script th:src="@{/vendor/popper.min.js}"></script>
+<script th:src="@{/vendor/bootstrap.min.js}"></script>
+
+<!-- Perfect Scrollbar -->
+<script th:src="@{/vendor/perfect-scrollbar.min.js}"></script>
+
+<!-- DOM Factory -->
+<script th:src="@{/vendor/dom-factory.js}"></script>
+
+<!-- MDK -->
+<script th:src="@{/vendor/material-design-kit.js}"></script>
+
+<!-- App JS -->
+<script th:src="@{/js/app.js}"></script>
+
+<!-- Preloader -->
+<script th:src="@{/js/preloader.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div class="card shadow mb-4" th:fragment="table">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+            Trainer table
+        </h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table
+                    class="table table-bordered"
+                    id="dataTable"
+            >
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Date Created</th>
+                    <th>Status</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                </thead>
+                <tr th:each="trainerDTO : ${trainerList}">
+                    <td th:text="${trainerDTO.id}"></td>
+                    <td th:text="${trainerDTO.firstname}"></td>
+                    <td th:text="${trainerDTO.lastname}"></td>
+                    <td th:text="${trainerDTO.email}"></td>
+                    <td th:text="${trainerDTO.phone}"></td>
+                    <td th:text="${trainerDTO.datecreated}"></td>
+                    <td th:text="${trainerDTO.status}"></td>
+                    <td>
+                        <a class="btn btn-info" th:href="@{'/trainer/edit/' + ${trainerDTO.id}}">Edit</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-info btn-danger" th:href="@{'/trainer/delete/' + ${trainerDTO.id}}">Delete</a>
+                    </td>
+                </tr>
+
+            </table>
+            <a class="btn btn-primary btn-sm" style="display: block; margin: 0 auto;" th:href="@{/trainer/add}">Add</a>
+        </div>
+    </div>
+
+</div>

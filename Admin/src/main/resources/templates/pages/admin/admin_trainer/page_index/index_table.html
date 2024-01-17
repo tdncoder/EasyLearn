@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div class="card shadow mb-4" th:fragment="table">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">
+            Course table
+        </h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table
+                    class="table"
+                    id="dataTable"
+            >
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Course</th>
+                    <th>Content</th>
+                </tr>
+                </thead>
+                <tfoot>
+                <tr>
+                    <th>Id</th>
+                    <th>Course</th>
+                    <th>Content</th>
+                </tr>
+                </tfoot>
+                <tbody>
+                <tr th:each="list: ${courseEditList}" >
+                    <td th:text="${list.id}" class="align-items-center col-1"></td>
+                    <td class="col-3">
+                        <img th:src="@{'/getImg/'+${list.img}}" class="custom-img rounded-start" alt="...">
+                    </td>
+                    <td>
+                        <div class="card-body">
+                            <div class="row d-flex justify-content-between">
+                                <h3 th:text="${list.title}" class="card-title"></h3>
+
+                                <div>
+
+                                <button th:if="${list.status}" class="btn btn-danger rounded-pill p-1" disabled>
+                                    <span class="label label-success m-0 p-1">ACTIVE</span>
+                                </button>
+                                    <button th:if="${!list.status}" class="btn btn-success rounded-pill p-1" disabled>
+                                        <span class="label label-danger m-0 p-1">INACTIVE</span>
+                                    </button>
+
+                                <a th:href="@{'/adminTrainer/update/' + ${list.id}}" class="btn btn-danger btn-circle btn-sm">
+
+                                    <i class="fa-solid fa-pen-nib"></i>
+                                </a>
+                                </div>
+
+                            </div>
+
+                            <p th:text="${list.description}" class="card-text"></p>
+                            <p class="card-text">
+                                <small th:text="${list.lastUpdate}" class="text-body-secondary"></small>
+                            </p>
+
+                            <a th:href="@{'/adminTrainer/edit/' + ${list.id}}" class="btn btn-primary btn-circle btn-sm">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </a>
+
+                            <a th:href="@{'/adminTrainer/info/' + ${list.id}}" class="btn btn-info btn-circle btn-sm">
+                                <i class="fas fa-info-circle"></i>
+                            </a>
+
+                            <a class="btn btn-danger btn-circle btn-sm" th:href="@{'/adminTrainer/delete/' + ${list.id}}"
+                               onclick="return confirm('Are you sure you want to DELETE this Course?')">
+                                <i class="fas fa-trash"></i>
+                            </a>
+
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

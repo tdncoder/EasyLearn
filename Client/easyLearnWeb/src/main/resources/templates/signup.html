@@ -1,0 +1,64 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <link rel="stylesheet" type = "text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>-->
+<!--    <title>SignUp</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash; Section: Design Block &ndash;&gt;-->
+<!--<section class="text-center">-->
+<!--    &lt;!&ndash; Background image &ndash;&gt;-->
+<!--    <div class="p-5 bg-image" style="-->
+<!--        background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');-->
+<!--        height: 300px;-->
+<!--        "></div>-->
+<!--    &lt;!&ndash; Background image &ndash;&gt;-->
+
+<!--    <div class="card mx-4 mx-md-5 shadow-5-strong" style="-->
+<!--        margin-top: -100px;-->
+<!--        background: hsla(0, 0%, 100%, 0.8);-->
+<!--        backdrop-filter: blur(30px);-->
+<!--        ">-->
+<!--        <div class="card-body py-5 px-md-5">-->
+
+<!--            <div class="row d-flex justify-content-center">-->
+<!--                <div class="col-lg-8">-->
+<!--                    <h2 class="fw-bold mb-5">Sign up now</h2>-->
+<!--                    <div th:if = "${msg}" class="alert-danger text-center">[[${msg}]]</div>-->
+<!--                    <form th:action="@{process_register}" method="post" th:object="${userDTO}">-->
+<!--                        &lt;!&ndash; 2 column grid layout with text inputs for the first and last names &ndash;&gt;-->
+<!--                        <input type="hidden" th:field="*{id}">-->
+<!--                        <input type="hidden" th:field="*{uuid}">-->
+
+<!--                        <div class="row">-->
+<!--                            <div class="col-md-6 mb-4">-->
+<!--                                <div class="form-outline">-->
+<!--                                    <input type="text" id="form3Example1" class="form-control" th:field="*{username}" />-->
+<!--                                    <label class="form-label" for="form3Example1"> Username</label>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+
+<!--                        &lt;!&ndash; Password input &ndash;&gt;-->
+<!--                        <div class="form-outline mb-4">-->
+<!--                            <input type="password" id="form3Example4" class="form-control" th:field="*{password}"/>-->
+<!--                            <label class="form-label" for="form3Example4">Password</label>-->
+<!--                        </div>-->
+<!--                        </div>-->
+
+<!--                        &lt;!&ndash; Submit button &ndash;&gt;-->
+<!--                        <button type="submit" class="btn btn-primary btn-block mb-4">-->
+<!--                            Sign up-->
+<!--                        </button>-->
+
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; Section: Design Block &ndash;&gt;-->
+
+<!--</body>-->
+<!--</html>-->

@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<div class="navbar navbar-expand navbar-light shadow py-3 my-0 mb-2" th:fragment="navbar">
+    <a th:href="@{/admin}"
+    ><i class="fas fa-fw fa-home"></i>
+        <span>Admin page</span>
+    </a>
+    <div class="mx-3"><i class="fas fa-angle-right" aria-hidden="true"></i></div>
+    <a th:href="@{/admin/customerCare/student}"
+    ><span>Student Customer Care</span>
+    </a>
+    <div class="mx-3"><i class="fas fa-angle-right" aria-hidden="true"></i></div>
+    <a th:href="@{/customerCare/student/detail}"
+    ><span>Detail</span>
+    </a>
+    <div class="mx-3"><i class="fas fa-angle-right" aria-hidden="true"></i></div>
+    <a th:href="@{/customerCare/student/replay}"
+    ><span>Replay</span>
+    </a>
+</div>

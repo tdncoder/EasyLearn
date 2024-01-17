@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<div th:fragment="titlePageContentTable">
+    <div class="row d-flex justify-content-between ">
+        <div class="col-xl-3 col-md-6 mt-2 ">
+            <h3>Student Feedback</h3>
+        </div>
+        <div class="col-xl-1 col-md-6 mt-2">
+        <select class="form-select card border-left-info shadow py-2  w-100" aria-label="Default select example">
+            <option class="text-sx font-weight-bold text-success text-uppercase" selected="">
+                Status
+            </option>
+            <option class="text-sx font-weight-bold text-success text-uppercase" value="1">
+                Pay
+            </option>
+            <option class="text-sx font-weight-bold text-success text-uppercase" value="2">
+                Course
+            </option>
+            <option class="text-sx font-weight-bold text-success text-uppercase" value="3">
+                Test
+            </option>
+        </select>
+        </div>
+    </div>
+</div>

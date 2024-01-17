@@ -1,0 +1,324 @@
+<!DOCTYPE html> 
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <script th:src="@{/js/index.js}"></script>
+    <link rel="stylesheet" type = "text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/vendor/slick/slick.css}"/>
+  <title>Front Page</title>
+</head>
+<body>
+    <div class="div">
+        <div th:fragment = "nav-bar" class="div-2">
+            <div class="div-3">
+                <img
+                  loading="lazy"
+                  th:src="@{/img/logo 3.svg}"
+                  class="img"
+                />
+                <img
+                  loading="lazy"
+                  th:src="@{/img/slogan 1.svg}"
+                  class="img-2"
+                />
+              </div>
+          <div class="div-4">
+            <div class="div-5">Home</div>
+            <div class="div-6">Course</div>
+            <div class="div-7">Article</div>
+            <div class="div-8">Support</div>
+          </div>
+          <div class="div-9">
+            <div class="div-10">
+              <a href="login" th:href="@{/login}">
+                <span>Login</span>
+              </a>
+            </div>
+            <div class="div-11">
+              <a href="signup" th:href="@{/signup}">
+                <span>Signup</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="div-12">
+          <div class="div-13">
+            <div class="div-14">
+              <div class="column">
+                <div class="div-15">
+                  <div class="div-16">Welcome to the future of english learning!!!</div>
+                  <div class="div-17">
+                    Empower yourself through language - join EL today!
+                  </div>
+                </div>
+              </div>
+              <div class="column-2">
+                <div class="div-18">
+                  <div class="div-19">
+                    <div class="div-20">
+                      <video class="video" data-el="video-1">
+                        <source
+                          type="video/mp4" th:src="@{https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4}"
+
+                        />
+                      </video>
+                      <div class="div-21"></div>
+                    </div>
+                  </div>
+                  <div class="div-22">
+                    <div class="div-23">Welcome</div>
+                    <div class="div-24">
+                      Don't miss out on this opportunity to learn and grow. Take the first step towards language fluency and community engagement. Register now and become part of a diverse and inclusive learning experience at EasyLearn.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="div-25">
+          <div class="div-26">
+            <div class="div-27">Một số trường đại học danh tiếng hỗ trợ</div>
+            <div class="div-28">Hình ảnh google, các trường đại học có tiếng.</div>
+            <div class="div-29">
+              <img
+                loading="lazy"
+                th:src="@{/img/logo/Unknown-4}"
+                class="img-3"
+              />
+              <img
+                loading="lazy"
+                th:src="@{/img/logo/Unknown-5}"
+                class="img-4"
+              />
+              <img
+                loading="lazy"
+                th:src="@{/img/logo/Unknown-6}"
+                class="img-5"
+              />
+              <img
+                loading="lazy"
+                th:src="@{/img/logo/Unknown-7}"
+                class="img-6"
+              />
+              <img
+                loading="lazy"
+                th:src="@{/img/logo/Unknown-8}"
+                class="img-7"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="div-30">
+          <div class="div-31">
+            <div class="div-32">Một số khóa học hot</div>
+            <div class="div-33">Hình ảnh một số khóa học nổi bật</div>
+            <div data-missing-component="BuilderCarousel">
+              <ul class="course-list" style="padding-left = 0px !important">
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Beginner</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Intermediate</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Advance</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Advance 2</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Advance 3</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Advance 4</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Advance 5</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Beginner</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="item">
+                  <div class="inner">
+                    <div class="img-box">
+                      <img th:src="@{/img/img-learn-toeic-course.jpg}" alt="">
+                    </div>
+                    <div class="txt-box">
+                      <h3 class="ttl">TOEIC Beginner</h3>
+                      <p class="desc">The best TOEIC course for beginner</p>
+                      <p class="rate">5.0/5.0</p>
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="div-34">
+          <div class="div-35">
+            <div class="div-36">
+              Một số feedback
+              <br />
+            </div>
+
+            <div class="div-37">Mô tả</div>
+          </div>
+        </div>
+        <div th:fragment = "footer" class="div-38">
+          <div class="div-39">
+            <img
+              loading="lazy"
+              srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/b695ed83f76ea9ef7a558dc15cc15a591aa8a11cba1dcaeb0374fa4f79c4f814?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+              class="img-8"
+            />
+            <div class="div-40">
+              <div class="div-41">
+                <div class="div-42">EasyLearn</div>
+                <div class="div-43">
+                  Home
+                  <br />
+                </div>
+                <div class="div-44">Course</div>
+                <div class="div-45">
+                  Support
+                  <br />
+                </div>
+              </div>
+              <div class="div-46">
+                <div class="div-47">Company</div>
+                <div class="div-48">
+                  Article
+                  <br />
+                </div>
+                <div class="div-49">
+                  Terms
+                  <br />
+                </div>
+                <div class="div-50">Contact us</div>
+              </div>
+            </div>
+          </div>
+          <div class="div-51"></div>
+          <div class="div-52">
+            <div class="div-53">© Photo, Inc. 2023. We love our users!</div>
+            <div class="div-54">
+              <div class="div-55">Follow us:</div>
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/430b5024efe2530ddb74ea55d9f637bc28848403548fc26c809710bc40334773?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                class="img-9"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/28abbcb255438a18a763dffa347a4ce05dca3847b31248a9374999bf3ed2a91a?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                class="img-10"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/b80fe7400927f9558e0b7c254e135f7090655f7afa226c4a55aa102167fd3272?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                class="img-11"
+              />
+              <img
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/cbb4603ddfa19d35e1d02111d58ce5104db29d81edb3429a89113ab30b12766f?apiKey=d3641c85a4aa44ecad2ea296fcc23aa3&"
+                class="img-12"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    <script type="text/javascript" th:src="@{//code.jquery.com/jquery-1.11.0.min.js}"></script>
+    <script type="text/javascript" th:src="@{//code.jquery.com/jquery-migrate-1.2.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/vendor/slick/slick.js}"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.course-list').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: false,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          dots: false,
+        });
+      });
+    </script>
+</body>
+</html>

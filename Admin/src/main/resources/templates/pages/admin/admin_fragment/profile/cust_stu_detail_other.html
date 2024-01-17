@@ -1,0 +1,120 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div class="container" th:fragment="profile_other">
+    <div class="main-body shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+        <div class="row gutters-sm">
+            <div class="col-md-4 d-flex flex-column ">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h4>Chipheo001</h4>
+                                <p class="text-secondary mb-1">Student</p>
+<!--                                <button class="btn btn-primary">Change Avatar</button>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Full Name</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                Kenneth Valdez
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Gender</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                Male
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Email</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                fip@jukmuh.al
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Phone</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                (239) 816-9029
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Create Date</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                15-12-2023
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Title:</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                Không nạp tiền được
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Problem</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                DB-status
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h6 class="mb-0">Date - Time</h6>
+                            </div>
+                            <div class="col-sm-9 text-secondary">
+                                Get ngày giờ gửi
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row gutters-sm">
+
+
+
+            <div class="card w-100">
+                <div class="card-body">
+                    <div class="text-secondary">
+                        <textarea class="form-control" placeholder="Feedback" rows="5" cols="30">Vào lúc 21h30 tôi đăng ký khóa học nhưng không vào học được. Hãy khắc phục cho tôi</textarea>
+                </div>
+                    <hr>
+                    <div class="row text-center">
+                        <div class="col-sm-12">
+                            <a class="btn btn-info " target="__blank" th:href="@{/customerCare/student/replay}">Replay</a>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+</div>

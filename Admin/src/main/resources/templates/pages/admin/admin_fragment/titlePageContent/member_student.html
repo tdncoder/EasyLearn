@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<div th:fragment="titlePageContentTable">
+    <div class="row d-flex justify-content-between">
+        <div class="col-xl-3 col-md-6 mt-2 ">
+            <h3>Student List</h3>
+        </div>
+        <div class="col-xl-1 col-md-6 mt-2">
+            <div class="card shadow w-100">
+                <a th:href="@{/member/student/course}" class="btn btn-info">Course</a>
+            </div>
+        </div>
+    </div>
+</div>

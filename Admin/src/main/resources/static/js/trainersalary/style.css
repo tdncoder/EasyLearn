@@ -1,0 +1,46 @@
+.hidden {
+            display: none;
+        }
+        #pagination {
+            display: flex;
+            justify-content: center;
+            margin-left: 10px;
+        }
+#searchInput {
+    padding: 10px 15px; /* Thêm padding để ô tìm kiếm lớn hơn và thoải mái hơn khi nhập */
+    border: 1px solid #ddd; /* Đường viền mảnh với màu nhẹ */
+    border-radius: 25px; /* Bo tròn các góc */
+    font-size: 16px; /* Kích thước chữ phù hợp */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng mờ nhẹ dưới ô tìm kiếm */
+    outline: none; /* Loại bỏ đường viền mặc định khi ô tìm kiếm được focus */
+    width: 100%; /* Chiều rộng tối đa */
+    max-width: 400px; /* Chiều rộng tối đa 400px */
+    margin: 20px auto; /* Căn giữa ô tìm kiếm và thêm khoảng cách trên và dưới */
+    transition: border-color 0.3s; /* Hiệu ứng chuyển màu khi focus */
+}
+
+#searchInput:focus {
+    border-color: #007bff; /* Đổi màu viền khi ô tìm kiếm được focus */
+}
+/* Style to make the display input look similar to a regular input field */
+.input-container {
+    position: relative;
+    display: flex;
+}
+
+#amount {
+    padding-right: 40px; /* Adjust padding to ensure space for VNĐ text */
+}
+
+.currency {
+    position: absolute;
+    right: 10px; /* Adjust as needed */
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    font-size: 1rem; /* Adjust as needed */
+    color: #6c757d; /* Adjust color as needed */
+}
+
+

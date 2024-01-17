@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<div th:fragment="titlePageContent">
+    <div class="row d-flex justify-content-between">
+        <div class="col-xl-4 col-md-6 mt-2 ">
+            <h3>Course List</h3>
+        </div>
+
+        <div class="col-xl-8 col-md-12 mt-2">
+            <div class="row d-flex justify-content-end">
+                <div class="col-xl-2 col-lg-4 col-md-4">
+                    <div class="card shadow ">
+                <a class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--        start model add course-->
+        <!--                start form add course-->
+
+            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="w-100 text-center">
+                                <h3 class="modal-title" id="exampleModalLong">Add course form</h3>
+                            </div>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+
+                        <form th:action="@{/adminTrainer/save}" th:object="${courseEditDTO}" onsubmit="return checkNull2()"
+                              enctype="multipart/form-data" method="post">
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="Title" class="form-label">Title Course</label>
+                                    <input th:field="*{title}" type="text" class="form-control input-element" id="Title" placeholder="Title">
+                                    <p id="titleError" class="e-wrong d-none"></p>
+                                </div>
+                                <hr>
+                                <div class="mb-5">
+                                    <label for="Description" class="form-label">Description</label>
+                                    <textarea th:field="*{description}" class="form-control input-element" id="Description" placeholder="Description"></textarea>
+                                    <p id="descriptionError" class="e-wrong d-none"></p>
+                                </div>
+                                <hr>
+                                <div class="mb-3">
+                                    <h3>Choose Img Avatar</h3>
+                                    <input name="imgCourseEdit" type="file" id="Video" class="input-element">
+                                    <p id="imgError" class="e-wrong d-none"></p>
+                                </div>
+                                <hr>
+                            </div>
+                            <hr>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Create</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        <!--                end form add course-->
+        <!--        end model add course-->
+
+    </div>
+</div>
