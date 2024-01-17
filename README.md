@@ -19,6 +19,7 @@ MySQL.
 <h3>Usage environment</h3>
 
 Java 17 or higher.
+MySQL 8.0.33
 
 <h1>Propose</h1>
 
