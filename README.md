@@ -42,6 +42,7 @@ This website consists of 3 parts: API, Admin, Client.
 After implementing this project with the team, I learned how to build Microservice code, use a 3rd party to make payments, understand more about how servlets work, and how to apply springboot to the project.
 
 <h1>How to run the website</h1>
+
 - After downloading the project, we will run APIService first. Wait a while after finishing running (showing "Spring start"), then we will run the Admin folder and then go to the Client folder.
 - This project is run in local so you can change another port to run it if you got the error from port.
 - http://localhost:9092/student-course (This is the Client page).
