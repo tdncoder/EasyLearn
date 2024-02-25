@@ -12,7 +12,7 @@ This is our project including 5 members building this project.
 
 <h3>Framework</h3>
 
-SpringBoot.
+SpringBoot, Bootstrap
 <h3>Databases</h3>
 
 MySQL.
